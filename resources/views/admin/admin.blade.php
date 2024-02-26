@@ -1,20 +1,20 @@
-@extends('admiin.layout')
+@extends('admin.layout')
 @section('content')
-
-@endsection
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">No</th>
+      <th scope="col">Nama</th>
+      <th scope="col">Email</th>
+      <th scope="col">Jabatan</th>
+      <th scope="col">Cabang</th>
+      <th scope="col">Delate</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
+      <td>Safira</td>
       <td>Otto</td>
       <td>@mdo</td>
     </tr>
@@ -31,3 +31,4 @@
     </tr>
   </tbody>
 </table>
+@endsection
