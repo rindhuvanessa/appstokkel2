@@ -15,13 +15,14 @@
     <tr>
       <th scope="row">1</th>
       <td>Safira</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>@safirahbrkh</td>
+      <td>HRD</td>
+      <td>tegal binangun</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
+      <td>alencia</td>
+      <td>@alencia</td>
       <td>@fat</td>
     </tr>
     <tr>
