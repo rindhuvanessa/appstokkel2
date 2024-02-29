@@ -23,7 +23,7 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">
+                        <a href="/Dashboard" class="nav-link active" aria-current="page">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#Dashboard"></use>
                             </svg>
@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="/admin" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#speedometer2"></use>
                             </svg>
@@ -39,15 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#table"></use>
-                            </svg>
-                            Barang
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="/stok" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#grid"></use>
                             </svg>
@@ -55,7 +47,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="/masuk" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#people-circle"></use>
                             </svg>
@@ -63,11 +55,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="/keluar" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#grid"></use>
                             </svg>
                             Keluar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/suplayer" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#grid"></use>
+                            </svg>
+                            suplayer
                         </a>
                     </li>
                 </ul>
