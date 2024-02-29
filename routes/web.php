@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('beranda');
-<<<<<<< HEAD
-=======
 });
+
 Route::get('/admin', function () {
     return view('admin.admin');
->>>>>>> 35f866e717368713f13a78d8f2d45ad350ada081
 });
 
 Auth::routes();
