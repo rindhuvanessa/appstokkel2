@@ -91,8 +91,10 @@
                 </div>
             </div>
         </div>
-        <div class="right ms-4">
+        <div class="container m-3">
             @yield('content')
+            <hr>
+
         </div>
     </div>
     </div>

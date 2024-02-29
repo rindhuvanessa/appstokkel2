@@ -1,5 +1,7 @@
 @extends('admin.layout')
 @section('content')
+<h1 class="mt-3">Admin</h1>
+<hr>
 <table class="table">
   <thead>
     <tr>
