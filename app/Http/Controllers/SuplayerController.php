@@ -13,7 +13,7 @@ class SuplayerController extends Controller
      */
     public function index()
     {
-        $suplayers = Suplayer::all();
+        $suplayer = Suplayer::all();
         return view('suplayer.suplayer', compact('suplayer'));
     }
 
@@ -30,12 +30,29 @@ class SuplayerController extends Controller
      */
     public function store(Request $request)
     {
-        $sup = Suplayer::create($request->validate());
+        $request->validate(
+            [
+                'namasuplayer' => ['required'],
+                'nomorwhatsapp' => ['required'],
+                'alamatperusahaan' => ['required'],
+            ],
+            [
+                'namasuplayer.required'=> ['Masukan Nama Suplayer'],
+                'nomorwhatsapp.required'=> ['Nomor Whatsapp harus diisi'],
+                'alamatperusahaan.required'=> ['Alamat Tidak Boleh Kosong'],
+            ]
+        );
 
-        if ($sup) {
-            return redirect('/Suplayer')->with('status', 'Data telah ditambahkan');
+         $suplayer = new Suplayer
+        $suplayer -> namasuplayer = $request['namasuplayer'];
+        $suplayer -> nomorwhatsapp = $request['nomorwhatsapp'];
+        $suplayer -> alamatperusahaan = $request['alamatperusahaan'];
+        $supplayer->save();
+
+        if ($suplayer) {
+            return redirect('/Suplayer')->with('status', 'Data berhasil ditambahkan');
         } else {
-            return redirect('/tambah Suplayer')->with('status', 'Data telah ditambahkan');
+            return redirect('/tambah Suplayer')->with('status', 'Data gagal ditambahkan');
         }
     }
 
