@@ -11,7 +11,8 @@ class SuplayerController extends Controller
      */
     public function index()
     {
-        //
+        $suplayer = suplayer::all();
+         return view ('suplayer.suplayer', compact('suplayer'));
     }
 
     /**
@@ -19,7 +20,7 @@ class SuplayerController extends Controller
      */
     public function create()
     {
-        //
+        return view('suplayer.insert');
     }
 
     /**
@@ -27,7 +28,13 @@ class SuplayerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sup = Suplayer::create($request->validate());
+
+        if ($sup){
+            return redirect('/Suplayer')->with('status','Data telah ditambahkan');
+        } else {
+            return redirect('/tambah Suplayer')->with('status','Data telah ditambahkan');
+        }
     }
 
     /**
