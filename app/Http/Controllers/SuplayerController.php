@@ -37,13 +37,13 @@ class SuplayerController extends Controller
                 'alamatperusahaan' => ['required'],
             ],
             [
-                'namasuplayer.required'=> ['Masukan Nama Suplayer'],
-                'nomorwhatsapp.required'=> ['Nomor Whatsapp harus diisi'],
-                'alamatperusahaan.required'=> ['Alamat Tidak Boleh Kosong'],
+                'namasuplayer.required'=> 'Masukan Nama Suplayer',
+                'nomorwhatsapp.required'=> 'Nomor Whatsapp harus diisi',
+                'alamatperusahaan.required'=> 'Alamat Tidak Boleh Kosong',
             ]
         );
 
-         $suplayer = new Suplayer
+         $suplayer = new Suplayer;
         $suplayer -> namasuplayer = $request['namasuplayer'];
         $suplayer -> nomorwhatsapp = $request['nomorwhatsapp'];
         $suplayer -> alamatperusahaan = $request['alamatperusahaan'];
