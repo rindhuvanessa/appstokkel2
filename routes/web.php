@@ -24,12 +24,11 @@ Route::get('/admin', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/suplayer', [App\Http\Controllers\SuplayerController::class, 'index']);
 Route::get('/tambahsuplayer', [App\Http\Controllers\SuplayerController::class, 'create']);
 Route::post('/savesuplayer', [App\Http\Controllers\SuplayerController::class, 'store']);
 Route::get('/edit', [App\Http\Controllers\SuplayerController::class, 'edit']);
 Route::get('/updatesuplayer', [App\Http\Controllers\SuplayerController::class, 'update']);
 Route::get('/delete', [App\Http\Controllers\SuplayerController::class, 'destroy']);
-
-
-
