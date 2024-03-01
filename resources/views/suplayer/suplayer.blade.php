@@ -1,6 +1,10 @@
 @extends('admin.layout')
 @section('content')
-<table class="table">
+<h1>Suplayer</h1>
+    <hr>
+    <a class="btn btn-primary" href="tambahsuplayer" role="button">Tambah Suplayer</a>
+
+    <table class="table">
   <thead>
     <tr>
       <th scope="col">No</th>
