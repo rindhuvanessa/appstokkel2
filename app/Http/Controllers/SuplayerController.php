@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Suplayer;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SuplayerController extends Controller
@@ -11,8 +13,8 @@ class SuplayerController extends Controller
      */
     public function index()
     {
-        $suplayer = suplayer::all();
-         return view ('suplayer.suplayer', compact('suplayer'));
+        $suplayer = Suplayer::all();
+        return view('suplayer.suplayer', compact('suplayer'));
     }
 
     /**
@@ -30,10 +32,10 @@ class SuplayerController extends Controller
     {
         $sup = Suplayer::create($request->validate());
 
-        if ($sup){
-            return redirect('/Suplayer')->with('status','Data telah ditambahkan');
+        if ($sup) {
+            return redirect('/Suplayer')->with('status', 'Data telah ditambahkan');
         } else {
-            return redirect('/tambah Suplayer')->with('status','Data telah ditambahkan');
+            return redirect('/tambah Suplayer')->with('status', 'Data telah ditambahkan');
         }
     }
 
