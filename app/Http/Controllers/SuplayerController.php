@@ -13,7 +13,7 @@ class SuplayerController extends Controller
      */
     public function index()
     {
-        $suplayer = Suplayer::all();
+        $suplayers = Suplayer::all();
         return view('suplayer.suplayer', compact('suplayer'));
     }
 
