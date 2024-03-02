@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('content')
-<h1>Suplayer</h1>
+    <h1>Suplayer</h1>
     <hr>
     <a class="btn btn-primary" href="tambahsuplayer" role="button">Tambah Suplayer</a>
 
@@ -19,14 +19,13 @@
     <tr>
       <th scope="row">1</th>
       <td>Safira</td>
-      <td>@safirahbrkh</td>
-      <td>HRD</td>
-      <td>tegal binangun</td>
+      <td>Otto</td>
+      <td>@mdo</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>alencia</td>
-      <td>@alencia</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
       <td>@fat</td>
     </tr>
     <tr>
