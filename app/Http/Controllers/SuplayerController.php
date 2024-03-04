@@ -69,7 +69,8 @@ class SuplayerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $suplayer = Suplayer::find($id);
+        return view('suplayer.edit', compact('suplayer'));
     }
 
     /**
@@ -77,7 +78,30 @@ class SuplayerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'namasuplayer' => ['required'],
+                'nomorwhatsapp' => ['required'],
+                'alamatperusahaan' => ['required'],
+            ],
+            [
+                'namasuplayer.required'=> 'Masukan Nama Suplayer',
+                'nomorwhatsapp.required'=> 'Nomor Whatsapp harus diisi',
+                'alamatperusahaan.required'=> 'Alamat Tidak Boleh Kosong',
+            ]
+        );
+
+         $suplayer = Suplayer::find($id);
+        $suplayer -> namasuplayer = $request['namasuplayer'];
+        $suplayer -> nomorwhatsapp = $request['nomorwhatsapp'];
+        $suplayer -> alamatperusahaan = $request['alamatperusahaan'];
+        $suplayer->save();
+
+        if ($suplayer) {
+            return redirect('/Suplayer')->with('status', 'Data berhasil ditambahkan');
+        } else {
+            return redirect('/tambah Suplayer')->with('status', 'Data gagal ditambahkan');
+        }
     }
 
     /**
