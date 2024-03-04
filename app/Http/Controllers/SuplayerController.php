@@ -44,13 +44,13 @@ class SuplayerController extends Controller
         );
 
          $suplayer = new Suplayer;
-        $suplayer -> namasuplayer = $request['namasuplayer'];
-        $suplayer -> nomorwhatsapp = $request['nomorwhatsapp'];
+        $suplayer -> namasupplier = $request['namasuplayer'];
+        $suplayer -> nomorwhatsaap = $request['nomorwhatsapp'];
         $suplayer -> alamatperusahaan = $request['alamatperusahaan'];
         $suplayer->save();
 
         if ($suplayer) {
-            return redirect('/Suplayer')->with('status', 'Data berhasil ditambahkan');
+            return redirect('/suplayer')->with('status', 'Data berhasil ditambahkan');
         } else {
             return redirect('/tambah Suplayer')->with('status', 'Data gagal ditambahkan');
         }
