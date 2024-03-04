@@ -1,6 +1,7 @@
 @extends('admin.layout')
 @section('content')
-<form action="/savesuplayer" method="post" enctype="multipart/form-data">
+<form action="/updatesuplayer/{{$suplayer->id}}" method="post" enctype="multipart/form-data">
+@method('put')
   @csrf
   <div class="mb-3"> 
     <label for="namasuplayer" class="form-label">Nama Suplayer</label>

@@ -30,5 +30,5 @@ Route::get('/suplayer', [App\Http\Controllers\SuplayerController::class, 'index'
 Route::get('/tambahsuplayer', [App\Http\Controllers\SuplayerController::class, 'create']);
 Route::post('/savesuplayer', [App\Http\Controllers\SuplayerController::class, 'store']);
 Route::get('/edit/{id}', [App\Http\Controllers\SuplayerController::class, 'edit']);
-Route::get('/updatesuplayer/{id}', [App\Http\Controllers\SuplayerController::class, 'update']);
+Route::put('/updatesuplayer/{id}', [App\Http\Controllers\SuplayerController::class, 'update']);
 Route::get('/delete/{id}', [App\Http\Controllers\SuplayerController::class, 'destroy']);
