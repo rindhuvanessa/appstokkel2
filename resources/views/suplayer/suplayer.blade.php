@@ -9,30 +9,23 @@
     <tr>
       <th scope="col">No</th>
       <th scope="col">Nama</th>
-      <th scope="col">Email</th>
-      <th scope="col">Jabatan</th>
-      <th scope="col">Cabang</th>
-      <th scope="col">Delate</th>
+      <th scope="col">Nomor Whatsapp</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">Editt</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
+@foreach ($suplayer as $sup)
     <tr>
-      <th scope="row">1</th>
-      <td>Safira</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <th scope="row">{{$loop->iteration}}</th>
+      <td>{{$sup->namasupplier}}</td>
+      <td>{{$sup->nomorwhatsaap}}</td>
+      <td>{{$sup->alamatperusahaan}}</td>
+      <td><a href="/edit/{{$sup->id}}" class="btn btn-success">Editt</a></td>
+      <td><a href="/hapus/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+@endforeach
   </tbody>
 </table>
 @endsection
