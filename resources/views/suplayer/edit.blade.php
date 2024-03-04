@@ -13,7 +13,7 @@
   </div>
   <div class="mb-3" >
     <label for="alamatperusahaan" class="form-label">Alamat Perusahaan</label>
-    <textarea name="alamatperusahaan" class="form-control" id="alamatperusahaan" cols="30" rows="10" aria-describedby="tuliskan alamat">"{{$suplayer->alamatperusahaan}}"</textarea>
+    <textarea name="alamatperusahaan" class="form-control" id="alamatperusahaan" cols="30" rows="10">"{{$suplayer->alamatperusahaan}}"</textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
