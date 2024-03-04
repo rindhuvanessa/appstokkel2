@@ -12,7 +12,7 @@
   </div>
   <div>
     <label for="alamatperusahaan" class="form-label">Alamat Perusahaan</label>
-    <textarea type="alamatperusahaan" id="alamatperusahaan" cols="30" rows="10" aria-describedby="tuliskan alamat"></textarea>
+    <textarea type="alamatperusahaan" class="form-control" id="alamatperusahaan" cols="30" rows="10" aria-describedby="tuliskan alamat"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
