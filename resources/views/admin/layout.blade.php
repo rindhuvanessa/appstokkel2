@@ -35,31 +35,7 @@
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#speedometer2"></use>
                             </svg>
-                            admin
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/stok" class="nav-link text-white">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#grid"></use>
-                            </svg>
-                            stok
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/masuk" class="nav-link text-white">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#people-circle"></use>
-                            </svg>
-                            masuk
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/keluar" class="nav-link text-white">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#grid"></use>
-                            </svg>
-                            Keluar
+                            Admin
                         </a>
                     </li>
                     <li>
@@ -67,7 +43,39 @@
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#grid"></use>
                             </svg>
-                            suplayer
+                            Suplayer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#speedometer2"></use>
+                            </svg>
+                            Pelanggan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/masuk" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#people-circle"></use>
+                            </svg>
+                            Barang Masuk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/keluar" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#grid"></use>
+                            </svg>
+                            Barang Keluar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stok" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#grid"></use>
+                            </svg>
+                            Stok
                         </a>
                     </li>
                 </ul>
