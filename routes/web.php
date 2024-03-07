@@ -40,10 +40,30 @@ Route::get('/editstok/{id}', [App\Http\Controllers\StokController::class, 'edit'
 Route::put('/updatestok/{id}', [App\Http\Controllers\StokController::class, 'update']);
 Route::get('/deletestok/{id}', [App\Http\Controllers\StokController::class, 'destroy']);
 
-Route::get('/bmasukk', [App\Http\Controllers\BmasukController::class, 'index']);
-Route::get('/tambahbmasukk', [App\Http\Controllers\BmasukController::class, 'create']);
-Route::post('/savebmasukkr', [App\Http\Controllers\BmasukController::class, 'store']);
-Route::get('/editbmasukk/{id}', [App\Http\Controllers\BmasukController::class, 'edit']);
-Route::put('/updatebmasukk/{id}', [App\Http\Controllers\BmasukController::class, 'update']);
-Route::get('/deletebmasukk/{id}', [App\Http\Controllers\BmasukController::class, 'destroy']);
+Route::get('/bmasuk', [App\Http\Controllers\BmasukController::class, 'index']);
+Route::get('/tambahbmasuk', [App\Http\Controllers\BmasukController::class, 'create']);
+Route::post('/savebmasuk', [App\Http\Controllers\BmasukController::class, 'store']);
+Route::get('/editbmasuk/{id}', [App\Http\Controllers\BmasukController::class, 'edit']);
+Route::put('/updatebmasuk/{id}', [App\Http\Controllers\BmasukController::class, 'update']);
+Route::get('/deletebmasuk/{id}', [App\Http\Controllers\BmasukController::class, 'destroy']);
 
+Route::get('/bkeluar', [App\Http\Controllers\BkeluarController::class, 'index']);
+Route::get('/tambahbkeluar', [App\Http\Controllers\BkeluarController::class, 'create']);
+Route::post('/savebkrluar', [App\Http\Controllers\BkeluarController::class, 'store']);
+Route::get('/editbkeluar/{id}', [App\Http\Controllers\BkeluarController::class, 'edit']);
+Route::put('/updatebkeluar/{id}', [App\Http\Controllers\BkeluarController::class, 'update']);
+Route::get('/deletebkeluar/{id}', [App\Http\Controllers\BkeluarController::class, 'destroy']);
+
+Route::get('/pelanggan', [App\Http\Controllers\PelangganController::class, 'index']);
+Route::get('/tambahpelanggan', [App\Http\Controllers\PelangganController::class, 'create']);
+Route::post('/savepelanggan', [App\Http\Controllers\PelangganController::class, 'store']);
+Route::get('/editpelanggan/{id}', [App\Http\Controllers\PelangganController::class, 'edit']);
+Route::put('/updatepelanggan/{id}', [App\Http\Controllers\PelangganController::class, 'update']);
+Route::get('/deletepelanggan/{id}', [App\Http\Controllers\PelangganController::class, 'destroy']);
+
+Route::get('/recap', [App\Http\Controllers\RecapController::class, 'index']);
+Route::get('/tambahrecap', [App\Http\Controllers\RecapController::class, 'create']);
+Route::post('/saverecap', [App\Http\Controllers\RecapController::class, 'store']);
+Route::get('/editrecap/{id}', [App\Http\Controllers\RecapController::class, 'edit']);
+Route::put('/updaterecap/{id}', [App\Http\Controllers\RecapController::class, 'update']);
+Route::get('/deleterecap/{id}', [App\Http\Controllers\RecapController::class, 'destroy']);
