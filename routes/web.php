@@ -35,7 +35,21 @@ Route::get('/delete/{id}', [App\Http\Controllers\SuplayerController::class, 'des
 
 Route::get('/stok', [App\Http\Controllers\StokController::class, 'index']);
 Route::get('/tambahstok', [App\Http\Controllers\StokController::class, 'create']);
+<<<<<<< HEAD
 Route::post('/savestok', [App\Http\Controllers\StokController::class, 'store']);
 Route::get('/editstok/{id}', [App\Http\Controllers\StokController::class, 'edit']);
 Route::put('/updatestok/{id}', [App\Http\Controllers\StokController::class, 'update']);
 Route::get('/deletestok/{id}', [App\Http\Controllers\StokController::class, 'destroy']);
+=======
+Route::post('/savestokr', [App\Http\Controllers\StokController::class, 'store']);
+Route::get('/editstok/{id}', [App\Http\Controllers\StokController::class, 'edit']);
+Route::put('/updatestok/{id}', [App\Http\Controllers\StokController::class, 'update']);
+Route::get('/deletestok/{id}', [App\Http\Controllers\StokController::class, 'destroy']);
+
+Route::get('/bmasukk', [App\Http\Controllers\BmasukController::class, 'index']);
+Route::get('/tambahbmasukk', [App\Http\Controllers\BmasukController::class, 'create']);
+Route::post('/savebmasukkr', [App\Http\Controllers\BmasukController::class, 'store']);
+Route::get('/editbmasukk/{id}', [App\Http\Controllers\BmasukController::class, 'edit']);
+Route::put('/updatebmasukk/{id}', [App\Http\Controllers\BmasukController::class, 'update']);
+Route::get('/deletebmasukk/{id}', [App\Http\Controllers\BmasukController::class, 'destroy']);
+>>>>>>> e4e7a8ff25ab8fa16fb5e498a9305a845700f72c
