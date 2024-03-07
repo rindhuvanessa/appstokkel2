@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stok;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class StokController extends Controller
@@ -11,7 +13,8 @@ class StokController extends Controller
      */
     public function index()
     {
-        //
+        $stok = Stok::all();
+        return view('stok.stok', compact('stok'));
     }
 
     /**
@@ -19,7 +22,7 @@ class StokController extends Controller
      */
     public function create()
     {
-        //
+        return view('stok.insert');
     }
 
     /**
@@ -27,7 +30,37 @@ class StokController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'kode' => ['required'],
+                'nama' => ['required'],
+                'hargalist' => ['required'],
+                'stok' => ['required'],
+                'cabang' => ['required'],
+
+            ],
+            [
+                'kode.required'=> 'Masukkan Kode',
+                'nama.required'=> 'Masukkan Nama',
+                'hargalist.required'=> 'Masukkan Harga',
+                'stok.required'=> 'Masukkan Stok',
+                'cabang.required'=> 'Masukkan Cabang',
+            ]
+        );
+
+         $stok = new Stok;
+        $stok -> kode = $request['kode'];
+        $stok -> nama = $request['nama'];
+        $stok -> hargalist = $request['hargalist'];
+        $stok -> stok = $request['stok'];
+        $stok -> cabang = $request['cabang'];
+        $stok->save();
+
+        if ($stok) {
+            return redirect('/stok')->with('status', 'Data berhasil ditambahkan');
+        } else {
+            return redirect('/tambahstok')->with('status', 'Data gagal ditambahkan');
+        }
     }
 
     /**
@@ -43,7 +76,8 @@ class StokController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $stok = Stok::find($id);
+        return view('stok.edit', compact('stok'));
     }
 
     /**
@@ -51,7 +85,36 @@ class StokController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'kode' => ['required'],
+                'nama' => ['required'],
+                'hargalist' => ['required'],
+                'stok' => ['required'],
+                'cabang' => ['required'],
+            ],
+            [
+                'kode.required'=> 'Masukkan Kode',
+                'nama.required'=> 'Masukkan Nama',
+                'hargalist.required'=> 'Masukkan Harga',
+                'stok.required'=> 'Masukkan Stok',
+                'cabang.required'=> 'Masukkan Cabang',
+            ]
+        );
+
+         $stok = Stok::find($id);
+         $stok -> kode = $request['kode'];
+         $stok -> nama = $request['nama'];
+         $stok -> hargalist = $request['hargalist'];
+         $stok -> stok = $request['stok'];
+         $stok -> cabang = $request['cabang'];
+        $stok->save();
+
+        if ($stok) {
+            return redirect('/Stok')->with('status', 'Data berhasil ditambahkan');
+        } else {
+            return redirect('/tambahstok')->with('status', 'Data gagal ditambahkan');
+        }
     }
 
     /**
@@ -59,6 +122,8 @@ class StokController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Stok::destroy('id',$id);
+
+        return redirect('/stok');
     }
 }

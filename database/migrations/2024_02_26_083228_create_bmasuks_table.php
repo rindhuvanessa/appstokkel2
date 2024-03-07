@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('bmasuks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('suplayer_id');
             $table->date('tanggalfaktur');
             $table->string('namabarang');
             $table->string('hargabeli');

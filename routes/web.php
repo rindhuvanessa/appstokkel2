@@ -32,3 +32,10 @@ Route::post('/savesuplayer', [App\Http\Controllers\SuplayerController::class, 's
 Route::get('/edit/{id}', [App\Http\Controllers\SuplayerController::class, 'edit']);
 Route::put('/updatesuplayer/{id}', [App\Http\Controllers\SuplayerController::class, 'update']);
 Route::get('/delete/{id}', [App\Http\Controllers\SuplayerController::class, 'destroy']);
+
+Route::get('/stok', [App\Http\Controllers\StokController::class, 'index']);
+Route::get('/tambahstok', [App\Http\Controllers\StokController::class, 'create']);
+Route::post('/savestok', [App\Http\Controllers\StokController::class, 'store']);
+Route::get('/editstok/{id}', [App\Http\Controllers\StokController::class, 'edit']);
+Route::put('/updatestok/{id}', [App\Http\Controllers\StokController::class, 'update']);
+Route::get('/deletestok/{id}', [App\Http\Controllers\StokController::class, 'destroy']);

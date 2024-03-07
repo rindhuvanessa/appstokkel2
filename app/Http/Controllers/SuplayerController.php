@@ -52,7 +52,7 @@ class SuplayerController extends Controller
         if ($suplayer) {
             return redirect('/suplayer')->with('status', 'Data berhasil ditambahkan');
         } else {
-            return redirect('/tambah Suplayer')->with('status', 'Data gagal ditambahkan');
+            return redirect('/tambahsuplayer')->with('status', 'Data gagal ditambahkan');
         }
     }
 
@@ -100,7 +100,7 @@ class SuplayerController extends Controller
         if ($suplayer) {
             return redirect('/Suplayer')->with('status', 'Data berhasil ditambahkan');
         } else {
-            return redirect('/tambah Suplayer')->with('status', 'Data gagal ditambahkan');
+            return redirect('/tambahsuplayer')->with('status', 'Data gagal ditambahkan');
         }
     }
 
@@ -109,6 +109,8 @@ class SuplayerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Suplayer::destroy('id',$id);
+
+        return redirect('/suplayer');
     }
 }

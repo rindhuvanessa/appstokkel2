@@ -22,7 +22,7 @@
       <td>{{$sup->namasupplier}}</td>
       <td>{{$sup->nomorwhatsaap}}</td>
       <td>{{$sup->alamatperusahaan}}</td>
-      <td><a href="/edit/{{$sup->id}}" class="btn btn-success">Editt</a></td>
+      <td><a href="/edit/{{$sup->id}}" class="btn btn-success">Edit</a></td>
       <td><a href="/hapus/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
     </tr>
 @endforeach

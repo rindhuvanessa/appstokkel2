@@ -8,23 +8,15 @@
   </div>
   <div class="mb-3" >
     <label for="nama" class="form-label">Nama Barang</label>
-    <input type="text" name="namap" class="form-control" id="nama" aria-describedby="masukan nama barang">
+    <input type="text" name="nama" class="form-control" id="nama" aria-describedby="masukan nama barang">
   </div>
   <div class="mb-3"> 
     <label for="hargalist" class="form-label">Harga</label>
     <input type="text" name="hargalist" class="form-control" id="hargalist" aria-describedby="masukan harga">
   </div>
   <div class="mb-3"> 
-    <label for="stok" class="form-label">Stok</label>
+    <label for="stok" class="form-label">Stok awal</label>
     <input type="text" name="stok" class="form-control" id="stok" aria-describedby="masukan stok">
-  </div>
-  <div class="mb-3"> 
-    <label for="suplayer_id" class="form-label">Suplayer</label>
-    <select id="suplayer_id" name="suplayer_id" class="form-control">
-        @foreach ($suplayer as $suplayer)
-            <option value="{{ $suplayer->id }}">{{ $suplayer->suplayer }}</option>
-        @endforeach
-    </select>
   </div>
   <div class="mb-3"> 
     <label for="cabang" class="form-label">Cabang</label>

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('hargalist');
             $table->integer('stok');
-            $table->foreignId('suplayer_id');
             $table->string('cabang');
             $table->timestamps();
         });
