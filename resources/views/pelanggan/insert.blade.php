@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('content')
-<form action="/savestok" method="post" enctype="multipart/form-data">
+<form action="/savepelanggan" method="post" enctype="multipart/form-data">
   @csrf
   <div class="mb-3"> 
     <label for="nama" class="form-label">Nama</label>

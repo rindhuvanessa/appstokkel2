@@ -47,14 +47,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/admin" class="nav-link text-white">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#speedometer2"></use>
-                            </svg>
-                            Pelanggan
-                        </a>
-                    </li>
-                    <li>
                         <a href="/masuk" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#people-circle"></use>
@@ -76,6 +68,14 @@
                                 <use xlink:href="#grid"></use>
                             </svg>
                             Stok
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/stok" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#people-circle"></use>
+                            </svg>
+                            Pelanggan
                         </a>
                     </li>
                 </ul>
