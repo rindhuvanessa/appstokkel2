@@ -13,11 +13,14 @@
   </div>
   <div class="mb-3" >
     <label for="alamat" class="form-label">Alamat</label>
-    <textarea name="alamat" class="form-control" id="alamat" cols="30" rows="10">value="{{$pelanggan->alamat}}"</textarea>
+    <textarea name="alamat" class="form-control" id="alamat" cols="30" rows="10">{{$pelanggan->alamat}}</textarea>
   </div>
-  <div class="mb-3"> 
+  <div> 
     <label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
-    <input type="text" name="jeniskelamin" class="form-control" id="jeniskelamin" value="{{$pelanggan->jeniskelamin}}">
+    <select type="text" name="jeniskelamin" class="form-control" id="jeniskelamin" aria-describedby="masukan jenis kelamin">
+      <option value="Laki-Laki">Laki-Laki</option>
+      <option value="Perempuan">Perempuan</option>
+    </select>
   </div>
   <div class="mb-3"> 
     <label for="kota" class="form-label">Kota</label>
