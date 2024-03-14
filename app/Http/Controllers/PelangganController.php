@@ -128,7 +128,6 @@ class PelangganController extends Controller
     public function destroy(string $id)
     {
         Pelanggan::destroy('id',$id);
-
         return redirect('/pelanggan');
     }
 }

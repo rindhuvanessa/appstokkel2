@@ -123,7 +123,6 @@ class StokController extends Controller
     public function destroy(string $id)
     {
         Stok::destroy('id',$id);
-
         return redirect('/stok');
     }
 }
