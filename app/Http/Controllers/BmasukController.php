@@ -26,7 +26,7 @@ class BmasukController extends Controller
     {
         $namabarang = Stok::all();
         $suplayer = Suplayer::all();
-        return view('barangmasuk.insert', compact('namabarang','suplayer'));
+        return view('barangmasuk.insert', compact('suplayer','namabarang'));
     }
 
     /**
@@ -108,7 +108,7 @@ class BmasukController extends Controller
         );
 
          $bmasuk = Bmasuk::find($id);
-        $bmasuk -> suplayer_id = $request['suplayer_id'];
+        $bmasuk -> suplayer_id = $request['suplayer'];
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> namabarang = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
@@ -128,6 +128,7 @@ class BmasukController extends Controller
     public function destroy(string $id)
     {
         Bmasuk::destroy('id',$id);
+
         return redirect('/bmasuk');
     }
 }

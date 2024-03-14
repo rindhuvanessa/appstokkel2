@@ -9,9 +9,9 @@
     <tr>
       <th scope="col">No</th>
       <th scope="col">Kode</th>
-      <th scope="col">Nama Barang</th>
+      <th scope="col">Nama</th>
       <th scope="col">Harga List</th>
-      <th scope="col">Stok Awal</th>
+      <th scope="col">Stok</th>
       <th scope="col">Cabang</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
