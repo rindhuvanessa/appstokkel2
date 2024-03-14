@@ -5,8 +5,9 @@
   <div class="mb-3"> 
     <label for="suplayer_id" class="form-label">Suplayer</label>
     <select type="date" name="suplayer_id" class="form-control" id="suplayer_id">
-        @foreach ($suplayer as $suplayer)
-            <option value="{{ $suplayer->id }}">{{ $suplayer->suplayer }}</option>
+        @foreach ($suplayer as $spy)
+            <option value="{{ $spy->id }}">ggg</option>
+            <option value="{{ $spy->id }}">{{$spy->suplayer}}</option>
         @endforeach
     </select>
   </div>

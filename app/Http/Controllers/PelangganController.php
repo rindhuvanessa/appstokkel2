@@ -106,7 +106,7 @@ class PelangganController extends Controller
             ]
         );
 
-         $suplayer = Suplayer::find($id);
+         $pelanggan = Pelanggan::find($id);
         $pelanggan -> nama = $request['nama'];
         $pelanggan -> nomortelepon = $request['nomortelepon'];
         $pelanggan -> alamat = $request['alamat'];

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Suplayer;
 use App\Models\Bmasuk;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class BmasukController extends Controller
     public function index()
     {
         $bmasuk = Bmasuk::all();
-        return view('bmasuk.bmasuk', compact('bmasuk'));
+        return view('barangmasuk.barangmasuk', compact('bmasuk'));
     }
 
     /**
@@ -22,7 +23,8 @@ class BmasukController extends Controller
      */
     public function create()
     {
-        return view('bmasuk.insert');
+        $suplayer = Suplayer::all();
+        return view('barangmasuk.insert', compact('suplayer'));
     }
 
     /**
@@ -77,7 +79,7 @@ class BmasukController extends Controller
     public function edit(string $id)
     {
         $bmasuk = Bmasuk::find($id);
-        return view('bmasuk.edit', compact('bmasuk'));
+        return view('barangmasuk.edit', compact('bmasuk'));
     }
 
     /**
