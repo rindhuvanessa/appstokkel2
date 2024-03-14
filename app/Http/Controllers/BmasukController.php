@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bmasuk;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class BmasukController extends Controller
@@ -11,7 +13,8 @@ class BmasukController extends Controller
      */
     public function index()
     {
-        //
+        $bmasuk = Bmasuk::all();
+        return view('bmasuk.bmasuk', compact('bmasuk'));
     }
 
     /**
@@ -19,7 +22,7 @@ class BmasukController extends Controller
      */
     public function create()
     {
-        //
+        return view('bmasuk.insert');
     }
 
     /**
@@ -27,7 +30,37 @@ class BmasukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'suplayer' => ['required'],
+                'tanggalfaktur' => ['required'],
+                'namabarang' => ['required'],
+                'hargabeli' => ['required'],
+                'jumlah' => ['required'],
+
+            ],
+            [
+                'suplayer.required'=> 'Masukkan Nama Suplayer',
+                'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
+                'namabarang.required'=> 'Masukkan Nama Barang',
+                'hargabeli.required'=> 'Masukkan Harga Beli',
+                'jumlah.required'=> 'Masukkan Jumlah',
+            ]
+        );
+
+         $bmasuk = new Bmasuk;
+        $bmasuk -> suplayer = $request['suplayer'];
+        $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
+        $bmasuk -> namabarang = $request['namabarang'];
+        $bmasuk -> hargabeli = $request['hargabeli'];
+        $bmasuk -> jumlah = $request['jumlah'];
+        $bmasuk->save();
+
+        if ($bmasuk) {
+            return redirect('/bmasuk')->with('status', 'Data berhasil ditambahkan');
+        } else {
+            return redirect('/tambahbmasuk')->with('status', 'Data gagal ditambahkan');
+        }
     }
 
     /**
@@ -43,7 +76,8 @@ class BmasukController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $bmasuk = Bmasuk::find($id);
+        return view('bmasuk.edit', compact('bmasuk'));
     }
 
     /**
@@ -51,7 +85,37 @@ class BmasukController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'suplayer' => ['required'],
+                'tanggalfaktur' => ['required'],
+                'namabarang' => ['required'],
+                'hargabeli' => ['required'],
+                'jumlah' => ['required'],
+
+            ],
+            [
+                'suplayer.required'=> 'Masukkan Nama Suplayer',
+                'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
+                'namabarang.required'=> 'Masukkan Nama Barang',
+                'hargabeli.required'=> 'Masukkan Harga Beli',
+                'jumlah.required'=> 'Masukkan Jumlah',
+            ]
+        );
+
+         $bmasuk = Bmasuk::find($id);
+        $bmasuk -> suplayer = $request['suplayer'];
+        $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
+        $bmasuk -> namabarang = $request['namabarang'];
+        $bmasuk -> hargabeli = $request['hargabeli'];
+        $bmasuk -> jumlah = $request['jumlah'];
+        $bmasuk->save();
+
+        if ($bmasuk) {
+            return redirect('/bmasuk')->with('status', 'Data berhasil ditambahkan');
+        } else {
+            return redirect('/tambahbmasuk')->with('status', 'Data gagal ditambahkan');
+        }
     }
 
     /**
@@ -59,6 +123,8 @@ class BmasukController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Bmasuk::destroy('id',$id);
+
+        return redirect('/bmasuk');
     }
 }
