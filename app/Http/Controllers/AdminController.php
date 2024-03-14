@@ -59,6 +59,6 @@ class AdminController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return redirect('/pelanggan');
     }
 }

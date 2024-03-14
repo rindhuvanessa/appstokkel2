@@ -9,8 +9,8 @@
   <div class="mb-3" >
     <label for="stok_id" class="form-label">Nama Barang</label>
     <select id="jbt_namabarang" name="jbt_namabarang" class="form-control">
-        @foreach ($jbt as $jabatan)
-    
+        @foreach ($jbt as $namabarang)
+          <option value="{{ $stok->id }}">{{$jbt->namabarang}}</option>
         @endforeach
   </div>
   <div class="mb-3" >
@@ -22,9 +22,10 @@
     <input type="text" name="subtotal" class="form-control" id="subtotal" aria-describedby="masukan subtotal">
   </div>
   <div class="mb-3" >
-    <label for="user_id" class="form-label">User_id</label>
-    <input type="text" name="user_id" class="form-control" id="user_id" aria-describedby="masukan user">
-        @foreach
+    <label for="user_id" class="form-label">Nama Pengguna</label>
+    <select id="jbt_namapengguna" name="jbt_namapengguna" class="form-control">
+        @foreach ($jbt as $namapengguna)
+        <option value="{{ $user_id }}">{{ $jbt->namapengguna }}</option>
         @endforeach
   </div>
   <div class="mb-3" >

@@ -47,7 +47,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/masuk" class="nav-link text-white">
+                        <a href="/bmasuk" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#people-circle"></use>
                             </svg>
@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/keluar" class="nav-link text-white">
+                        <a href="/bkeluar" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#grid"></use>
                             </svg>
@@ -71,7 +71,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/stok" class="nav-link text-white">
+                        <a href="/pelanggan" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#people-circle"></use>
                             </svg>

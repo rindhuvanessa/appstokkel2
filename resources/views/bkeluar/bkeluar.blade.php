@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('content')
-    <h1>bkeluar</h1>
+    <h1>Barang Keluar</h1>
     <hr>
     <a class="btn btn-primary" href="tambahbkeluar" role="button">Tambah Barang Keluar</a>
 
@@ -17,3 +17,4 @@
     </tr>
   </thead>
   <tbody>
+  @endsection
