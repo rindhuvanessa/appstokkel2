@@ -96,7 +96,6 @@ class BmasukController extends Controller
                 'suplayer_id' => ['required'],
                 'hargabeli' => ['required'],
                 'jumlah' => ['required'],
-
             ],
             [
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
