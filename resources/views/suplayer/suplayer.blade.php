@@ -8,7 +8,7 @@
   <thead>
     <tr>
       <th scope="col">No</th>
-      <th scope="col">Nama Suplayer</th>
+      <th scope="col">Nama</th>
       <th scope="col">Nomor Whatsapp</th>
       <th scope="col">Alamat</th>
       <th scope="col">Editt</th>

@@ -36,26 +36,26 @@ class BmasukController extends Controller
     {
         $request->validate(
             [
+                'suplayer_id' => ['required'],
                 'tanggalfaktur' => ['required'],
                 'namabarang' => ['required'],
-                'suplayer_id' => ['required'],
                 'hargabeli' => ['required'],
                 'jumlah' => ['required'],
 
             ],
             [
+                'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
                 'namabarang.required'=> 'Masukkan Nama Barang',
-                'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
                 'jumlah.required'=> 'Masukkan Jumlah',
             ]
         );
 
          $bmasuk = new Bmasuk;
+        $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> namabarang = $request['namabarang'];
-        $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> hargabeli = $request['hargabeli'];
         $bmasuk -> jumlah = $request['jumlah'];
         $bmasuk->save();
@@ -91,25 +91,26 @@ class BmasukController extends Controller
     {
         $request->validate(
             [
+                'suplayer_id' => ['required'],
                 'tanggalfaktur' => ['required'],
                 'namabarang' => ['required'],
-                'suplayer_id' => ['required'],
                 'hargabeli' => ['required'],
                 'jumlah' => ['required'],
+
             ],
             [
+                'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
                 'namabarang.required'=> 'Masukkan Nama Barang',
-                'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
                 'jumlah.required'=> 'Masukkan Jumlah',
             ]
         );
 
          $bmasuk = Bmasuk::find($id);
+        $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> namabarang = $request['namabarang'];
-        $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> hargabeli = $request['hargabeli'];
         $bmasuk -> jumlah = $request['jumlah'];
         $bmasuk->save();

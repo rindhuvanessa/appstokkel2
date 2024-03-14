@@ -10,7 +10,7 @@
       <th scope="col">No</th>
       <th scope="col">Tanggal Faktur</th>
       <th scope="col">Nama Barang</th>
-      <th scope="col">Nama Suplayer</th>
+      <th scope="col">Suplayer</th>
       <th scope="col">Harga Beli </th>
       <th scope="col">Jumlah Masuk</th>
       <th scope="col">Tanggal Dibuat</th>
