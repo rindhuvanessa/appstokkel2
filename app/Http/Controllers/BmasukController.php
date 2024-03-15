@@ -80,8 +80,10 @@ class BmasukController extends Controller
      */
     public function edit(string $id)
     {
+        $namabarang = Stok::all();
+        $suplayer = Suplayer::all();
         $bmasuk = Bmasuk::find($id);
-        return view('barangmasuk.edit', compact('bmasuk'));
+        return view('barangmasuk.edit', compact('bmasuk','suplayer','namabarang'));
     }
 
     /**
