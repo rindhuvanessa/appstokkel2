@@ -47,19 +47,11 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/bmasuk" class="nav-link text-white">
+                        <a href="/pelanggan" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#people-circle"></use>
                             </svg>
-                            Barang Masuk
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/bkeluar" class="nav-link text-white">
-                            <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#grid"></use>
-                            </svg>
-                            Barang Keluar
+                            Pelanggan
                         </a>
                     </li>
                     <li>
@@ -71,11 +63,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/pelanggan" class="nav-link text-white">
+                        <a href="/bmasuk" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#grid"></use>
+                            </svg>
+                            Barang Masuk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/bkeluar" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#people-circle"></use>
                             </svg>
-                            Pelanggan
+                            Barang Keluar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/recap" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#people-circle"></use>
+                            </svg>
+                            Recap
                         </a>
                     </li>
                 </ul>
