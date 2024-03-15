@@ -24,9 +24,9 @@ class BkeluarController extends Controller
      */
     public function create()
     {
-        $jbt = Stok::all();
-        $jbt = Pelanggan::all();
-        return view('bkeluar.insert', compact('jbt','jbt'));
+        $namabarang = Stok::all();
+        $namapengguna = Pelanggan::all();
+        return view('bkeluar.insert', compact('namabarang','namapengguna'));
 
     }
 

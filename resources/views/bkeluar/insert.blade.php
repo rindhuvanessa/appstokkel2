@@ -8,9 +8,9 @@
   </div>
   <div class="mb-3" >
     <label for="stok_id" class="form-label">Nama Barang</label>
-    <select id="jbt_namabarang" name="jbt_namabarang" class="form-control">
-        @foreach ($jbt as $namabarang)
-          <option value="{{ $stok->id }}">{{$jbt->namabarang}}</option>
+    <select id="nb_namabarang" name="nb_namabarang" class="form-control">
+        @foreach ($namabarang as $nb)
+          <option value="{{ $nb->id }}">{{$nb->namabarang}}</option>
         @endforeach
         </select>
   </div>
@@ -24,9 +24,9 @@
   </div>
   <div class="mb-3" >
     <label for="user_id" class="form-label">Nama Pengguna</label>
-    <select id="jbt_namapengguna" name="jbt_namapengguna" class="form-control">
-        @foreach ($jbt as $namapengguna)
-        <option value="{{ $user_id }}">{{ $jbt->namapengguna }}</option>
+    <select id="namapengguna" name="namapengguna" class="form-control">
+        @foreach ($namapengguna as $np)
+        <option value="{{$np->id }}">{{ $np->namapengguna }}</option>
         @endforeach
         </select>
   </div>
