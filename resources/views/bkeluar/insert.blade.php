@@ -12,6 +12,7 @@
         @foreach ($jbt as $namabarang)
           <option value="{{ $stok->id }}">{{$jbt->namabarang}}</option>
         @endforeach
+        </select>
   </div>
   <div class="mb-3" >
     <label for="jumlah" class="form-label">Jumlah</label>
@@ -27,6 +28,7 @@
         @foreach ($jbt as $namapengguna)
         <option value="{{ $user_id }}">{{ $jbt->namapengguna }}</option>
         @endforeach
+        </select>
   </div>
   <div class="mb-3" >
     <label for="tanggalbuat" class="form-label">Tanggal Buat</label>

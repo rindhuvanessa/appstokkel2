@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stok;
+use App\Models\Pelanggan;
 use App\Models\Bkeluar;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -22,7 +24,10 @@ class BkeluarController extends Controller
      */
     public function create()
     {
-        return view('bkeluar.insert');
+        $jbt = Stok::all();
+        $jbt = Pelanggan::all();
+        return view('bkeluar.insert', compact('jbt','jbt'));
+
     }
 
     /**

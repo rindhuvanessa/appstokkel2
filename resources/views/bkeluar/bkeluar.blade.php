@@ -17,4 +17,18 @@
     </tr>
   </thead>
   <tbody>
+  @foreach ($bkeluar as $sup)
+    <tr>
+    <th scope="row">{{$loop->iteration}}</th>
+      <td>{{$sup->tanggalfaktur}}</td>
+      <td>{{$sup->stok}}</td>
+      <td>{{$sup->jumlah}}</td>
+      <td>{{$sup->subtotal}}</td>
+      <td>{{$sup->user_id}}</td>
+      <td>{{$sup->tanggalbuat}}</td>
+      <td>{{$sup->cabang}}</td>
+      <td><a href="/editbkeluar/{{$sup->id}}" class="btn btn-success">Edit</a></td>
+      <td><a href="/hapusbkeluar/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
+    </tr>
+@endforeach
   @endsection
