@@ -8,8 +8,8 @@
   <thead>
     <tr>
       <th scope="col">No</th>
-      <th scope="col">Nama</th>
       <th scope="col">Kode</th>
+      <th scope="col">Nama</th>
       <th scope="col">Harga List</th>
       <th scope="col">Stok</th>
       <th scope="col">Cabang</th>

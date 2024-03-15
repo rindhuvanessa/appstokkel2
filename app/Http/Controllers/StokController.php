@@ -102,13 +102,13 @@ class StokController extends Controller
             ]
         );
 
-         $stok = Stok::find($id);
+          $stok = Stok::find($id);
          $stok -> kode = $request['kode'];
          $stok -> nama = $request['nama'];
          $stok -> hargalist = $request['hargalist'];
          $stok -> stok = $request['stok'];
          $stok -> cabang = $request['cabang'];
-        $stok->save();
+         $stok->save();
 
         if ($stok) {
             return redirect('/Stok')->with('status', 'Data berhasil ditambahkan');
@@ -123,7 +123,6 @@ class StokController extends Controller
     public function destroy(string $id)
     {
         Stok::destroy('id',$id);
-
         return redirect('/stok');
     }
 }

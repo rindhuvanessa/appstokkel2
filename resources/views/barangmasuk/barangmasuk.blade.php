@@ -22,9 +22,9 @@
 @foreach ($bmasuk as $sup)
 <tr>
     <th scope="row">{{$loop->iteration}}</th>
-      <td>{{$sup->suplayer}}</td>
       <td>{{$sup->tanggalfaktur}}</td>
       <td>{{$sup->namabarang}}</td>
+      <td>{{$sup->suplayer}}</td>
       <td>{{$sup->hargabeli}}</td>
       <td>{{$sup->jumlah}}</td>
       <td><a href="/editbmasuk/{{$sup->id}}" class="btn btn-success">Edit</a></td>

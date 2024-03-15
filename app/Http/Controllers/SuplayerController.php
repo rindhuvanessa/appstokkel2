@@ -110,7 +110,6 @@ class SuplayerController extends Controller
     public function destroy(string $id)
     {
         Suplayer::destroy('id',$id);
-
         return redirect('/suplayer');
     }
 }

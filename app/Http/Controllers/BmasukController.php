@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Stok;
+use App\Models\Suplayer;
 use App\Models\Bmasuk;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -14,7 +16,7 @@ class BmasukController extends Controller
     public function index()
     {
         $bmasuk = Bmasuk::all();
-        return view('bmasuk.bmasuk', compact('bmasuk'));
+        return view('barangmasuk.barangmasuk', compact('bmasuk'));
     }
 
     /**
@@ -22,7 +24,9 @@ class BmasukController extends Controller
      */
     public function create()
     {
-        return view('bmasuk.insert');
+        $namabarang = Stok::all();
+        $suplayer = Suplayer::all();
+        return view('barangmasuk.insert', compact('suplayer','namabarang'));
     }
 
     /**
@@ -32,7 +36,7 @@ class BmasukController extends Controller
     {
         $request->validate(
             [
-                'suplayer' => ['required'],
+                'suplayer_id' => ['required'],
                 'tanggalfaktur' => ['required'],
                 'namabarang' => ['required'],
                 'hargabeli' => ['required'],
@@ -40,7 +44,7 @@ class BmasukController extends Controller
 
             ],
             [
-                'suplayer.required'=> 'Masukkan Nama Suplayer',
+                'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
                 'namabarang.required'=> 'Masukkan Nama Barang',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
@@ -49,7 +53,7 @@ class BmasukController extends Controller
         );
 
          $bmasuk = new Bmasuk;
-        $bmasuk -> suplayer = $request['suplayer'];
+        $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> namabarang = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
@@ -77,7 +81,7 @@ class BmasukController extends Controller
     public function edit(string $id)
     {
         $bmasuk = Bmasuk::find($id);
-        return view('bmasuk.edit', compact('bmasuk'));
+        return view('barangmasuk.edit', compact('bmasuk'));
     }
 
     /**
@@ -87,7 +91,7 @@ class BmasukController extends Controller
     {
         $request->validate(
             [
-                'suplayer' => ['required'],
+                'suplayer_id' => ['required'],
                 'tanggalfaktur' => ['required'],
                 'namabarang' => ['required'],
                 'hargabeli' => ['required'],
@@ -95,7 +99,7 @@ class BmasukController extends Controller
 
             ],
             [
-                'suplayer.required'=> 'Masukkan Nama Suplayer',
+                'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
                 'namabarang.required'=> 'Masukkan Nama Barang',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
@@ -104,7 +108,7 @@ class BmasukController extends Controller
         );
 
          $bmasuk = Bmasuk::find($id);
-        $bmasuk -> suplayer = $request['suplayer'];
+        $bmasuk -> suplayer_id = $request['suplayer'];
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> namabarang = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
