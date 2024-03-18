@@ -13,14 +13,13 @@
       <th scope="col">Suplayer</th>
       <th scope="col">Harga Beli </th>
       <th scope="col">Jumlah Masuk</th>
-      <th scope="col">Tanggal Dibuat</th>
-      <th scope="col">Admin</th>
-      <th scope="col">Cabang</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
 @foreach ($bmasuk as $sup)
-<tr>
+    <tr>
     <th scope="row">{{$loop->iteration}}</th>
       <td>{{$sup->tanggalfaktur}}</td>
       <td>{{$sup->namabarang}}</td>
