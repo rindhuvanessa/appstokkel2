@@ -30,6 +30,6 @@
     <label for="jumlah" class="form-label">Jumlah Masuk</label>
     <input type="number" name="jumlah" class="form-control" id="jumlah" aria-describedby="masukan jumlah masuk">
   </div>
-  <button type="submit" class="btn btn-primary">save barang</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

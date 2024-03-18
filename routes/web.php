@@ -25,6 +25,7 @@ Route::get('/admin', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
 
 Route::get('/suplayer', [App\Http\Controllers\SuplayerController::class, 'index']);
 Route::get('/tambahsuplayer', [App\Http\Controllers\SuplayerController::class, 'create']);

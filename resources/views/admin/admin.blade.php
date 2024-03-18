@@ -2,7 +2,8 @@
 @section('content')
     <h1>Admin</h1>
     <hr>
-    
+    <a class="btn btn-primary" href="/register" role="button">Tambah Admin</a>
+
 <table class="table">
   <thead>
     <tr>

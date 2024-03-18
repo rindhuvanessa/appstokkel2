@@ -13,7 +13,7 @@
   </div>
   <div class="mb-3"> 
     <label for="tanggalfaktur" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tanggalfaktur" class="form-control" id="tanggalfaktur" value="{{$bmasuk->tanggalfaktur}}">>
+    <input type="date" name="tanggalfaktur" class="form-control" id="tanggalfaktur" value="{{$bmasuk->tanggalfaktur}}">
   </div>
   <div class="mb-3">
     <label for="namabarang" class="form-label">Nama barang</label>
@@ -31,6 +31,6 @@
     <label for="jumlah" class="form-label">Jumlah Masuk</label>
     <input type="number" name="jumlah" class="form-control" id="jumlah" value="{{$bmasuk->jumlah}}">
   </div>
-  <button type="submit" class="btn btn-primary">save barang</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

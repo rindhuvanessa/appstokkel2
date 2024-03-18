@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 
 class BmasukController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -110,7 +114,7 @@ class BmasukController extends Controller
         );
 
          $bmasuk = Bmasuk::find($id);
-        $bmasuk -> suplayer_id = $request['suplayer'];
+        $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> namabarang = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
