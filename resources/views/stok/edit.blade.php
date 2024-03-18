@@ -13,7 +13,7 @@
   </div>
   <div class="mb-3"> 
     <label for="hargalist" class="form-label">Harga</label>
-    <input type="text" name="hargalist" class="form-control" id="hargalist" value="{{$stok->hargalist}}">
+    <input type="number" name="hargalist" class="form-control" id="hargalist" value="{{$stok->hargalist}}">
   </div>
   <div class="mb-3"> 
     <label for="stok" class="form-label">Stok awal</label>

@@ -115,7 +115,7 @@ class StokController extends Controller
          $stok->save();
 
         if ($stok) {
-            return redirect('/Stok')->with('status', 'Data berhasil ditambahkan');
+            return redirect('/stok')->with('status', 'Data berhasil ditambahkan');
         } else {
             return redirect('/tambahstok')->with('status', 'Data gagal ditambahkan');
         }

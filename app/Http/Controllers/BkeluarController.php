@@ -64,6 +64,7 @@ class BkeluarController extends Controller
          $bkeluar = new Bkeluar;
          $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
          $bkeluar -> stok_id = $request['stok_id'];
+         $bkeluar -> jumlah = $request['jumlah'];
          $bkeluar -> subtotal = $request['subtotal'];
          $bkeluar -> user_id = $request['user_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
@@ -90,8 +91,10 @@ class BkeluarController extends Controller
      */
     public function edit(string $id)
     {
+        $namabarang = Stok::all();
+        $namapengguna = Pelanggan::all();
         $bkeluar = Bkeluar::find($id);
-        return view('bkeluar.bkeluar' , compact('bkeluar'));
+        return view('bkeluar.edit' , compact('bkeluar','namabarang','namapengguna'));
     }
 
     /**
@@ -124,6 +127,7 @@ class BkeluarController extends Controller
          $bkeluar = Bkeluar::find($id);
          $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
          $bkeluar -> stok_id = $request['stok_id'];
+         $bkeluar -> jumlah = $request['jumlah'];
          $bkeluar -> subtotal = $request['subtotal'];
          $bkeluar -> user_id = $request['user_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
@@ -142,6 +146,8 @@ class BkeluarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Bkeluar::destroy('id',$id);
+
+        return redirect('/bkeluar');
     }
 }

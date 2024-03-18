@@ -7,6 +7,7 @@
     <table class="table">
   <thead>
     <tr>
+      <th scope="col">No</th>
       <th scope="col">Tanggal Faktur</th>
       <th scope="col">Nama Barang</th>
       <th scope="col">Jumlah</th>
@@ -14,6 +15,8 @@
       <th scope="col">Pelanggan</th>
       <th scope="col">Tanggal Buat</th>
       <th scope="col">Cabang</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +24,7 @@
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
       <td>{{$sup->tanggalfaktur}}</td>
-      <td>{{$sup->stok}}</td>
+      <td>{{$sup->stok_id}}</td>
       <td>{{$sup->jumlah}}</td>
       <td>{{$sup->subtotal}}</td>
       <td>{{$sup->user_id}}</td>
