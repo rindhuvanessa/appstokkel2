@@ -1,6 +1,7 @@
 @extends('admin.layout')
 @section('content')
-<form action="/savebmasuk" method="post" enctype="multipart/form-data">
+<form action="/updatebmasuk/{{$bmasuk->id}}" method="post" enctype="multipart/form-data">
+@method('put')
   @csrf
   <div class="mb-3"> 
     <label for="suplayer_id" class="form-label">Suplayer</label>

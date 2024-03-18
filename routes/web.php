@@ -49,7 +49,7 @@ Route::get('/deletebmasuk/{id}', [App\Http\Controllers\BmasukController::class, 
 
 Route::get('/bkeluar', [App\Http\Controllers\BkeluarController::class, 'index']);
 Route::get('/tambahbkeluar', [App\Http\Controllers\BkeluarController::class, 'create']);
-Route::post('/savebkrluar', [App\Http\Controllers\BkeluarController::class, 'store']);
+Route::post('/savebkeluar', [App\Http\Controllers\BkeluarController::class, 'store']);
 Route::get('/editbkeluar/{id}', [App\Http\Controllers\BkeluarController::class, 'edit']);
 Route::put('/updatebkeluar/{id}', [App\Http\Controllers\BkeluarController::class, 'update']);
 Route::get('/deletebkeluar/{id}', [App\Http\Controllers\BkeluarController::class, 'destroy']);
