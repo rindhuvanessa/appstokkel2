@@ -8,10 +8,10 @@
   <thead>
     <tr>
       <th scope="col">Tanggal Faktur</th>
-      <th scope="col">Stok</th>
+      <th scope="col">Nama Barang</th>
       <th scope="col">Jumlah</th>
       <th scope="col">Subtotal</th>
-      <th scope="col">User_Id</th>
+      <th scope="col">Pelanggan</th>
       <th scope="col">Tanggal Buat</th>
       <th scope="col">Cabang</th>
     </tr>

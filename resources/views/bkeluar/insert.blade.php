@@ -10,7 +10,7 @@
     <label for="stok_id" class="form-label">Nama Barang</label>
     <select id="nb_namabarang" name="nb_namabarang" class="form-control">
         @foreach ($namabarang as $nb)
-          <option value="{{ $nb->id }}">{{$nb->namabarang}}</option>
+          <option value="{{ $nb->id }}">{{$nb->nama}}</option>
         @endforeach
         </select>
   </div>
@@ -26,7 +26,7 @@
     <label for="user_id" class="form-label">Nama Pengguna</label>
     <select id="namapengguna" name="namapengguna" class="form-control">
         @foreach ($namapengguna as $np)
-        <option value="{{$np->id }}">{{ $np->namapengguna }}</option>
+        <option value="{{$np->id }}">{{ $np->nama }}</option>
         @endforeach
         </select>
   </div>
