@@ -24,10 +24,10 @@
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
       <td>{{$sup->tanggalfaktur}}</td>
-      <td>{{$sup->stok_id}}</td>
+      <td>{{$sup->stok->namab}}</td>
       <td>{{$sup->jumlah}}</td>
       <td>{{$sup->subtotal}}</td>
-      <td>{{$sup->user_id}}</td>
+      <td>{{$sup->pelanggan->namap}}</td>
       <td>{{$sup->tanggalbuat}}</td>
       <td>{{$sup->cabang}}</td>
       <td><a href="/editbkeluar/{{$sup->id}}" class="btn btn-success">Edit</a></td>

@@ -19,7 +19,7 @@
     <label for="namabarang" class="form-label">Nama barang</label>
     <select name="namabarang" class="form-control" id="namabarang">
         @foreach ($namabarang as $nb)
-            <option value="{{ $nb->id }}">{{$nb->nama}}</option>
+            <option value="{{ $nb->id }}">{{$nb->namab}}</option>
         @endforeach
     </select>
   </div>
@@ -30,6 +30,10 @@
   <div class="mb-3" >
     <label for="jumlah" class="form-label">Jumlah Masuk</label>
     <input type="number" name="jumlah" class="form-control" id="jumlah" value="{{$bmasuk->jumlah}}">
+  </div>
+  <div class="mb-3" >
+    <label for="cabang" class="form-label">Cabang</label>
+    <input type="text" name="cabang" class="form-control" id="cabang" aria-describedby="{{$bmasuk->cabang}}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -22,7 +22,7 @@
 @foreach ($pelanggan as $sup)
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
-      <td>{{$sup->nama}}</td>
+      <td>{{$sup->namap}}</td>
       <td>{{$sup->nomortelepon}}</td>
       <td>{{$sup->alamat}}</td>
       <td>{{$sup->jeniskelamin}}</td>

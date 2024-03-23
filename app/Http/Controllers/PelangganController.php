@@ -36,7 +36,7 @@ class PelangganController extends Controller
     {
         $request->validate(
             [
-                'nama' => ['required'],
+                'namap' => ['required'],
                 'nomortelepon' => ['required'],
                 'alamat' => ['required'],
                 'jeniskelamin' => ['required'],
@@ -44,7 +44,7 @@ class PelangganController extends Controller
                 'provinsi' => ['required'],
             ],
             [
-                'nama.required'=> 'Masukkan Nama Pelanggan',
+                'namap.required'=> 'Masukkan Nama Pelanggan',
                 'nomortelepon.required'=> 'Masukkan Nomor Telepon',
                 'alamat.required'=> 'Tuliskan Alamat',
                 'jeniskelamin.required'=> 'Masukkan Jenis Kelamin',
@@ -54,7 +54,7 @@ class PelangganController extends Controller
         );
 
          $pelanggan = new Pelanggan;
-        $pelanggan -> nama = $request['nama'];
+        $pelanggan -> namap = $request['namap'];
         $pelanggan -> nomortelepon = $request['nomortelepon'];
         $pelanggan -> alamat = $request['alamat'];
         $pelanggan -> jeniskelamin = $request['jeniskelamin'];
@@ -93,7 +93,7 @@ class PelangganController extends Controller
     {
         $request->validate(
             [
-                'nama' => ['required'],
+                'namap' => ['required'],
                 'nomortelepon' => ['required'],
                 'alamat' => ['required'],
                 'jeniskelamin' => ['required'],
@@ -101,7 +101,7 @@ class PelangganController extends Controller
                 'provinsi' => ['required'],
             ],
             [
-                'nama.required'=> 'Masukkan Nama Pelanggan',
+                'namap.required'=> 'Masukkan Nama Pelanggan',
                 'nomortelepon.required'=> 'Masukkan Nomor Telepon',
                 'alamat.required'=> 'Tuliskan Alamat',
                 'jeniskelamin.required'=> 'Masukkan Jenis Kelamin',
@@ -111,7 +111,7 @@ class PelangganController extends Controller
         );
 
          $pelanggan = Pelanggan::find($id);
-        $pelanggan -> nama = $request['nama'];
+        $pelanggan -> namap = $request['namap'];
         $pelanggan -> nomortelepon = $request['nomortelepon'];
         $pelanggan -> alamat = $request['alamat'];
         $pelanggan -> jeniskelamin = $request['jeniskelamin'];

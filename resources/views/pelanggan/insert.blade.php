@@ -3,8 +3,8 @@
 <form action="/savepelanggan" method="post" enctype="multipart/form-data">
   @csrf
   <div class="mb-3"> 
-    <label for="nama" class="form-label">Nama</label>
-    <input type="text" name="nama" class="form-control" id="nama" aria-describedby="masukan nama pelanggan">
+    <label for="namap" class="form-label">Nama</label>
+    <input type="text" name="namap" class="form-control" id="namap" aria-describedby="masukan nama pelanggan">
   </div>
   <div class="mb-3" >
     <label for="nomortelepon" class="form-label">Nomor Telepon</label>
