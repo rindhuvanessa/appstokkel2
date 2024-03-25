@@ -18,8 +18,7 @@ return new class extends Migration
             $table->foreignId('namabarang');
             $table->foreignId('stok_id');
             $table->string('hargabeli');
-            $table->string('jumlah');
-            $table->string('cabang');
+            $table->string('jumlahbm');
             $table->timestamps();
         });
     }
