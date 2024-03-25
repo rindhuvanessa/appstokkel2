@@ -16,7 +16,11 @@
   </div>
   <div class="mb-3" >
     <label for="jumlah" class="form-label">Jumlah</label>
+<<<<<<< HEAD
+    <input type="number" name="jumlah" class="form-control" id="jumlah"  aria-describedby="tuliskan jumlah">
+=======
     <input type="number" name="jumlah" class="form-control" id="jumlah" aria-describedby="tuliskan jumlah">
+>>>>>>> f314f84e2c04d81fae7e94572ab2152a0d7ba8ed
   </div>
   <div class="mb-3" >
     <label for="subtotal" class="form-label">Subtotal</label>
