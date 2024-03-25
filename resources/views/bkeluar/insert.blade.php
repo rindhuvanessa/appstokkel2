@@ -4,7 +4,7 @@
   @csrf
   <div class="mb-3"> 
     <label for="tanggalfaktur" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tanggalfaktur" class="form-control" id="namasuplayer" aria-describedby="masukan tanggal faktur">
+    <input type="date" name="tanggalfaktur" class="form-control" id="tanggalfaktur" aria-describedby="masukan tanggal faktur">
   </div>
   <div class="mb-3" >
     <label for="stok_id" class="form-label">Nama Barang</label>
@@ -16,7 +16,7 @@
   </div>
   <div class="mb-3" >
     <label for="jumlah" class="form-label">Jumlah</label>
-    <input number="jumlah" class="form-control" id="jumlah" cols="30" rows="10" aria-describedby="tuliskan jumlah"></textarea>
+    <input type="number" name="jumlah" class="form-control" id="jumlah"  aria-describedby="tuliskan jumlah">
   </div>
   <div class="mb-3" >
     <label for="subtotal" class="form-label">Subtotal</label>
