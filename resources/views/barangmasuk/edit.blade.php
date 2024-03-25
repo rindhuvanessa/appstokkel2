@@ -31,10 +31,6 @@
     <label for="jumlah" class="form-label">Jumlah Masuk</label>
     <input type="number" name="jumlah" class="form-control" id="jumlah" value="{{$bmasuk->jumlah}}">
   </div>
-  <div class="mb-3" >
-    <label for="cabang" class="form-label">Cabang</label>
-    <input type="text" name="cabang" class="form-control" id="cabang" aria-describedby="{{$bmasuk->cabang}}">
-  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

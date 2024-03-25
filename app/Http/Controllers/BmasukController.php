@@ -64,17 +64,15 @@ class BmasukController extends Controller
          $bmasuk = new Bmasuk;
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> suplayer_id = $request['suplayer_id'];
-        $bmasuk -> namabarang = $request['namabarang'];
-        $bmasuk -> stok_id = $request['stok_id'];
+        $bmasuk -> stok_id = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
-        $bmasuk -> jumlah = $request['jumlah'];
-        $bmasuk -> cabang = $request['cabang'];
+        $bmasuk -> jumlahbm = $request['jumlahbm'];
         $bmasuk->save();
 
-        $idstok = $request ['stok_id'];
+        $idstok = $request ['namabarang'];
         $updatestok = Stok::findOrfail($idstok);
         $updatestok->update([
-            'jstok' => $updatestok->stok + $request ['jumlah'],
+            'jstok' => $updatestok->jstok + $request ['jumlah'],
         ]);
 
         if ($bmasuk) {
