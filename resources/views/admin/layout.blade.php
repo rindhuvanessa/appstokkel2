@@ -93,7 +93,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="" width="32" height="32"
                             class="rounded-circle me-2">
-                        <strong>{{ Auth::user()->name }}</strong>
+                        
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                         <li><a class="dropdown-item" href="#">New project...</a></li>
