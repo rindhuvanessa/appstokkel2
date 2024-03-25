@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Stok extends Model
 {
     use HasFactory;
-    protected $fillabe =
-    [    'kode',
+    protected $fillable = [
+        'kode',
         'namab',
         'hargalist',
         'jstok',
         'cabang',
-];
+    ];
 }
