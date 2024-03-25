@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->date('tanggalfaktur');
             $table->foreignId('suplayer_id');
-            $table->foreignId('namabarang');
             $table->foreignId('stok_id');
             $table->string('hargabeli');
             $table->string('jumlahbm');
