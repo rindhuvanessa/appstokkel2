@@ -11,7 +11,7 @@
     <div class="col-lg-6 px-0">
       <h1 class="display-4 fst-italic">Selamat Datang</h1>
       <h2 class="display-4 fst-italic">Di PT. SAN INDONESIA</h2>
-      <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Masuk</a></p>
+      <p class="lead mb-0"><a href="login" class="text-body-emphasis fw-bold">Masuk</a></p>
     </div>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

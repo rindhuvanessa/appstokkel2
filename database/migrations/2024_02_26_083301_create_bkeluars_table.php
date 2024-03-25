@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->date('tanggalfaktur');
             $table->foreignId('stok_id');
-            $table->string('jumlah');
+            $table->string('jumlahbk');
             $table->string('subtotal');
             $table->foreignId('user_id');
             $table->date('tanggalbuat');
-            $table->string('cabang');
             $table->timestamps();
         });
     }

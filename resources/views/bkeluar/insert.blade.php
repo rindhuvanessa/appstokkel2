@@ -8,15 +8,19 @@
   </div>
   <div class="mb-3" >
     <label for="stok_id" class="form-label">Nama Barang</label>
-    <select id="nb_namabarang" name="nb_namabarang" class="form-control">
+    <select id="stok_id" name="stok_id" class="form-control">
         @foreach ($namabarang as $nb)
-          <option value="{{ $nb->id }}">{{$nb->nama}}</option>
+          <option value="{{ $nb->id }}">{{$nb->namab}}</option>
         @endforeach
         </select>
   </div>
   <div class="mb-3" >
     <label for="jumlah" class="form-label">Jumlah</label>
+<<<<<<< HEAD
     <input type="number" name="jumlah" class="form-control" id="jumlah"  aria-describedby="tuliskan jumlah">
+=======
+    <input type="number" name="jumlah" class="form-control" id="jumlah" aria-describedby="tuliskan jumlah">
+>>>>>>> f314f84e2c04d81fae7e94572ab2152a0d7ba8ed
   </div>
   <div class="mb-3" >
     <label for="subtotal" class="form-label">Subtotal</label>
@@ -24,9 +28,9 @@
   </div>
   <div class="mb-3" >
     <label for="user_id" class="form-label">Nama Pengguna</label>
-    <select id="namapengguna" name="namapengguna" class="form-control">
+    <select id="user_id" name="user_id" class="form-control">
         @foreach ($namapengguna as $np)
-        <option value="{{$np->id }}">{{ $np->nama }}</option>
+        <option value="{{$np->id }}">{{ $np->namap}}</option>
         @endforeach
         </select>
   </div>

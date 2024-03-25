@@ -4,8 +4,8 @@
 @method('put')
   @csrf
   <div class="mb-3"> 
-    <label for="nama" class="form-label">Nama</label>
-    <input type="text" name="nama" class="form-control" id="nama" value="{{$pelanggan->nama}}">
+    <label for="namap" class="form-label">Nama</label>
+    <input type="text" name="namap" class="form-control" id="namap" value="{{$pelanggan->namap}}">
   </div>
   <div class="mb-3" >
     <label for="nomortelepon" class="form-label">Nomor Telepon</label>

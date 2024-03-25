@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
-{
+{   
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $admin = User::all();
+        return view('admin.admin', compact('admin'));
     }
 
     /**

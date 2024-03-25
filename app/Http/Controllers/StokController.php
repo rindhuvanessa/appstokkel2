@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class StokController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -33,26 +37,26 @@ class StokController extends Controller
         $request->validate(
             [
                 'kode' => ['required'],
-                'nama' => ['required'],
+                'namab' => ['required'],
                 'hargalist' => ['required'],
-                'stok' => ['required'],
+                'jstok' => ['required'],
                 'cabang' => ['required'],
 
             ],
             [
                 'kode.required'=> 'Masukkan Kode',
-                'nama.required'=> 'Masukkan Nama',
+                'namab.required'=> 'Masukkan namab',
                 'hargalist.required'=> 'Masukkan Harga',
-                'stok.required'=> 'Masukkan Stok',
+                'jstok.required'=> 'Masukkan Jumlah Stok',
                 'cabang.required'=> 'Masukkan Cabang',
             ]
         );
 
          $stok = new Stok;
         $stok -> kode = $request['kode'];
-        $stok -> nama = $request['nama'];
+        $stok -> namab = $request['namab'];
         $stok -> hargalist = $request['hargalist'];
-        $stok -> stok = $request['stok'];
+        $stok -> jstok = $request['jstok'];
         $stok -> cabang = $request['cabang'];
         $stok->save();
 
@@ -88,30 +92,30 @@ class StokController extends Controller
         $request->validate(
             [
                 'kode' => ['required'],
-                'nama' => ['required'],
+                'namab' => ['required'],
                 'hargalist' => ['required'],
-                'stok' => ['required'],
+                'jstok' => ['required'],
                 'cabang' => ['required'],
             ],
             [
                 'kode.required'=> 'Masukkan Kode',
-                'nama.required'=> 'Masukkan Nama',
+                'namab.required'=> 'Masukkan namab',
                 'hargalist.required'=> 'Masukkan Harga',
-                'stok.required'=> 'Masukkan Stok',
+                'jstok.required'=> 'Masukkan Stok',
                 'cabang.required'=> 'Masukkan Cabang',
             ]
         );
 
           $stok = Stok::find($id);
          $stok -> kode = $request['kode'];
-         $stok -> nama = $request['nama'];
+         $stok -> namab = $request['namab'];
          $stok -> hargalist = $request['hargalist'];
-         $stok -> stok = $request['stok'];
+         $stok -> jstok = $request['jstok'];
          $stok -> cabang = $request['cabang'];
          $stok->save();
 
         if ($stok) {
-            return redirect('/Stok')->with('status', 'Data berhasil ditambahkan');
+            return redirect('/stok')->with('status', 'Data berhasil ditambahkan');
         } else {
             return redirect('/tambahstok')->with('status', 'Data gagal ditambahkan');
         }

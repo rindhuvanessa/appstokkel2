@@ -1,11 +1,12 @@
-@extends('layouts.app')
+@extends('admin.layout')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+    <h1>Tambah Admin</h1>
+    <hr>
+    <div class="row">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">Formulir Tambah Admin</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -73,5 +74,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection

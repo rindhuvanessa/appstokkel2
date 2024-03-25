@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('bmasuks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('suplayer_id');
             $table->date('tanggalfaktur');
-            $table->string('namabarang');
+            $table->foreignId('suplayer_id');
+            $table->foreignId('namabarang');
+            $table->foreignId('stok_id');
             $table->string('hargabeli');
-            $table->string('jumlah');
+            $table->string('jumlahbm');
             $table->timestamps();
         });
     }
