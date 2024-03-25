@@ -23,7 +23,7 @@
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
       <td>{{$sup->tanggalfaktur}}</td>
-      <td>{{$sup->suplayer->namasuplayer}}</td>
+      <td>{{$sup->suplayer->namasupplier}}</td>
       <td>{{$sup->namabarang}}</td>
       <td>{{$sup->stok->namab}}</td>
       <td>{{$sup->hargabeli}}</td>
