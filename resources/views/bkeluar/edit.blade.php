@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('content')
-<form action="/savebkeluar" method="post" enctype="multipart/form-data">
+<form action="/updatebkeluar/{{ $bkeluar->id}}" method="post" enctype="multipart/form-data">
   @csrf
   <div class="mb-3"> 
     <label for="tanggalfaktur" class="form-label">Tanggal Faktur</label>
@@ -10,7 +10,7 @@
     <label for="stok_id" class="form-label">Nama Barang</label>
     <select id="nb_namabarang" name="nb_namabarang" class="form-control">
         @foreach ($namabarang as $nb)
-          <option value="{{ $nb->id }}">{{$nb->nama}}</option>
+          <option value="{{ $nb->id }}">{{$nb->namab}}</option>
         @endforeach
         </select>
   </div>
@@ -26,7 +26,7 @@
     <label for="user_id" class="form-label">Nama Pengguna</label>
     <select id="namapengguna" name="namapengguna" class="form-control">
         @foreach ($namapengguna as $np)
-        <option value="{{$np->id }}">{{ $np->nama }}</option>
+        <option value="{{$np->id }}">{{ $np->namap }}</option>
         @endforeach
         </select>
   </div>
