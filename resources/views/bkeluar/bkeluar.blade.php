@@ -14,7 +14,6 @@
       <th scope="col">Subtotal</th>
       <th scope="col">Pelanggan</th>
       <th scope="col">Tanggal Buat</th>
-      <th scope="col">Cabang</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -29,7 +28,6 @@
       <td>{{$sup->subtotal}}</td>
       <td>{{$sup->pelanggan->namap}}</td>
       <td>{{$sup->tanggalbuat}}</td>
-      <td>{{$sup->cabang}}</td>
       <td><a href="/editbkeluar/{{$sup->id}}" class="btn btn-success">Edit</a></td>
       <td><a href="/hapusbkeluar/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
     </tr>

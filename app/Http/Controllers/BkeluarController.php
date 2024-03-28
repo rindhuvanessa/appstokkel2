@@ -65,7 +65,7 @@ class BkeluarController extends Controller
          $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
          $bkeluar -> stok_id = $request['stok_id'];
          $bkeluar -> jumlahbk = $request['jumlah'];
-         $bkeluar -> user_id = $request['user_id'];
+         $bkeluar -> pelanggan_id = $request['user_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
          $bkeluar -> subtotal = $subtotal;
          $bkeluar ->save();
@@ -133,7 +133,7 @@ class BkeluarController extends Controller
          $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
          $bkeluar -> stok_id = $request['stok_id'];
          $bkeluar -> jumlahbk = $request['jumlah'];
-         $bkeluar -> user_id = $request['user_id'];
+         $bkeluar -> pelanggan_id = $request['user_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
          $bkeluar -> subtotal = $subtotal;
          $bkeluar ->save();

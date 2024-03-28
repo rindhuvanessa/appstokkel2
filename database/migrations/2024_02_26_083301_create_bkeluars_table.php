@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('stok_id');
             $table->string('jumlahbk');
             $table->string('subtotal');
-            $table->foreignId('user_id');
+            $table->foreignId('pelanggan_id');
             $table->date('tanggalbuat');
             $table->timestamps();
         });
