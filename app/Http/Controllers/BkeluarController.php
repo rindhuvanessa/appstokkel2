@@ -45,31 +45,35 @@ class BkeluarController extends Controller
                 'tanggalfaktur' => ['required'],
                 'stok_id' => ['required'],
                 'jumlah' => ['required'],
-                'subtotal' => ['required'],
                 'user_id' => ['required'],
                 'tanggalbuat' => ['required'],
-                'cabang' => ['required'],
+                
             ],
             [
                 'tanggalfaktur.required' => 'Masukkan Tanggal Faktur',
                 'stok_id.required' => 'Masukkan Nama Barang',
                 'jumlah.required' => 'Jumlah Harus Diisi',
-                'subtotal.required' => 'Masukkan Subtotal',
                 'user_id.required' => 'Nama Pengguna Harus Diisi',
                 'tanggalbuat.required' => ' Masukkan Tanggal Buat ',
-                'cabang.required' => 'Nama Cabang Harus Diisi',
             ]
-        );       
-        
+        ); 
+        $idstok = $request ['stok_id'];
+        $produk = Stok::findOrfail($idstok);
+        $subtotal = $produk->hargalist *$request['jumlah'];
+
          $bkeluar = new Bkeluar;
          $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
          $bkeluar -> stok_id = $request['stok_id'];
-         $bkeluar -> jumlah = $request['jumlah'];
-         $bkeluar -> subtotal = $request['subtotal'];
+         $bkeluar -> jumlahbk = $request['jumlah'];
          $bkeluar -> user_id = $request['user_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
-         $bkeluar -> cabang = $request['cabang'];
+         $bkeluar -> subtotal = $subtotal;
          $bkeluar ->save();
+
+         $updatestok = Stok::findOrfail($idstok);
+         $updatestok->update([
+             'stok' =>$updatestok->hargalist - $request['jumlah'],
+         ]);
  
          if ($bkeluar) {
                 return redirect('/bkeluar')->with('status' , 'Barang Keluar Berhasil Ditambah');
@@ -108,31 +112,36 @@ class BkeluarController extends Controller
                 'tanggalfaktur' => ['required'],
                 'stok_id' => ['required'],
                 'jumlah' => ['required'],
-                'subtotal' => ['required'],
                 'user_id' => ['required'],
                 'tanggalbuat' => ['required'],
-                'cabang' => ['required'],
+
             ],
             [
                 'tanggalfaktur.required' => 'Masukkan Tanggal Faktur',
                 'stok_id.required' => 'Masukkan Nama Barang',
                 'jumlah.required' => 'Jumlah Harus Diisi',
-                'subtotal.required' => 'Masukkan Subtotal',
                 'user_id.required' => 'Nama Pengguna Harus Diisi',
                 'tanggalbuat.required' => ' Masukkan Tanggal Buat ',
-                'cabang.required' => 'Nama Cabang Tidak Boleh Kosong',
             ]
         );       
         
+        $idstok = $request ['stok_id'];
+        $produk = Stok::findOrfail($idstok);
+        $subtotal = $produk->hargalist *$request['jumlah'];
+
          $bkeluar = Bkeluar::find($id);
          $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
          $bkeluar -> stok_id = $request['stok_id'];
-         $bkeluar -> jumlah = $request['jumlah'];
-         $bkeluar -> subtotal = $request['subtotal'];
+         $bkeluar -> jumlahbk = $request['jumlah'];
          $bkeluar -> user_id = $request['user_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
-         $bkeluar -> cabang = $request['cabang'];
+         $bkeluar -> subtotal = $subtotal;
          $bkeluar ->save();
+
+         $updatestok = stok::findOrfail($idstok);
+         $updatestok->update([
+             'stok' =>$updatestok->hargalist - $request['jumlah'],
+         ]);
  
          if ($bkeluar) {
                 return redirect('/bkeluar')->with('status' , 'Barang Keluar Berhasil Ditambah');

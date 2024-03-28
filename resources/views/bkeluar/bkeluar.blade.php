@@ -25,7 +25,7 @@
     <th scope="row">{{$loop->iteration}}</th>
       <td>{{$sup->tanggalfaktur}}</td>
       <td>{{$sup->stok->namab}}</td>
-      <td>{{$sup->jumlah}}</td>
+      <td>{{$sup->jumlahbk}}</td>
       <td>{{$sup->subtotal}}</td>
       <td>{{$sup->pelanggan->namap}}</td>
       <td>{{$sup->tanggalbuat}}</td>
@@ -34,4 +34,6 @@
       <td><a href="/hapusbkeluar/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
     </tr>
 @endforeach
+  </tbody>
+</table>
   @endsection
