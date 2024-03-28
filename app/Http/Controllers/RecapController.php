@@ -15,7 +15,10 @@ class RecapController extends Controller
      */
     public function index()
     {
-        //
+        $bkeluar = Pelanggan::all();
+        $bkeluar = Pelanggan::all();
+
+        return view('pelanggan.pelanggan', compact('pelanggan'));
     }
 
     /**

@@ -43,20 +43,16 @@ class BmasukController extends Controller
                 'tanggalfaktur' => ['required'],
                 'suplayer_id' => ['required'],
                 'namabarang' => ['required'],
-                'stok_id' => ['required'],
                 'hargabeli' => ['required'],
                 'jumlah' => ['required'],
-                'cabang' => ['required'],
 
             ],
             [
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
                 'suplayer_id.required'=> 'Masukkan Nama Suplayer',
-                'namabarang.required'=> 'Masukkan Nama Barang',
-                'stok_id.required' => 'Masukkan Stok',
+                'namabarang.required' => 'Masukkan Stok',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
                 'jumlah.required'=> 'Masukkan Jumlah',
-                'cabang.required'=> 'Masukkan Tanggal Dibuat',
                 
             ]
         );
@@ -66,7 +62,7 @@ class BmasukController extends Controller
         $bmasuk -> suplayer_id = $request['suplayer_id'];
         $bmasuk -> stok_id = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
-        $bmasuk -> jumlahbm = $request['jumlahbm'];
+        $bmasuk -> jumlahbm = $request['jumlah'];
         $bmasuk->save();
 
         $idstok = $request ['namabarang'];
@@ -110,33 +106,27 @@ class BmasukController extends Controller
             [
                 'tanggalfaktur' => ['required'],
                 'suplayer_id' => ['required'],
-                'namabarang' => ['required'],
                 'stok_id' => ['required'],
                 'hargabeli' => ['required'],
                 'jumlah' => ['required'],
-                'cabang' => ['required'],
 
             ],
             [
                 'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
                 'suplayer_id.required'=> 'Masukkan Nama Suplayer',
-                'namabarang.required'=> 'Masukkan Nama Barang',
                 'stok_id.required' => 'Masukkan Stok',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
                 'jumlah.required'=> 'Masukkan Jumlah',
-                'cabang.required'=> 'Masukkan Tanggal Dibuat',
 
             ]
         );
 
-         $bmasuk = Bmasuk::find($id);
+        $bmasuk = new Bmasuk;
         $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
         $bmasuk -> suplayer_id = $request['suplayer_id'];
-        $bmasuk -> namabarang = $request['namabarang'];
-        $bmasuk -> stok_id = $request['stok_id'];
+        $bmasuk -> stok_id = $request['namabarang'];
         $bmasuk -> hargabeli = $request['hargabeli'];
-        $bmasuk -> jumlah = $request['jumlah'];
-        $bmasuk -> cabang = $request['cabang'];
+        $bmasuk -> jumlahbm = $request['jumlah'];
         $bmasuk->save();
 
         if ($bmasuk) {
