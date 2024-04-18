@@ -17,7 +17,7 @@
       <th scope="col">Delete</th>
     </tr>
   </thead>
-  <tbody>
+<tbody>
 @foreach ($bmasuk as $sup)
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
@@ -31,7 +31,6 @@
     </tr>
 @endforeach
   </tbody>
-  <table class="table">
   <thead>
     <tr>
       <th scope="col">No</th>
@@ -60,6 +59,5 @@
     </tr>
 @endforeach
   </tbody>
-</table>
 </table>
 @endsection
