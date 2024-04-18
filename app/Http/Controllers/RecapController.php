@@ -31,6 +31,8 @@ class RecapController extends Controller
             $bmasuk = Bmasuk::all();
             $bkeluar = Bkeluar::all();
             $sum_total = Bkeluar::sum('subtotal');
+            return view('recap.recap', compact('barangmasuk','bkeluar'));
+
         }
         return view('recap.recap', compact('bmasuk','bkeluar'));
     }
