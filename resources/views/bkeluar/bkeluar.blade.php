@@ -22,7 +22,7 @@
   @foreach ($bkeluar as $sup)
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
-      <td>{{$sup->tanggalfaktur}}</td>
+      <td>{{$sup->tanggalfkt}}</td>
       <td>{{$sup->stok->namab}}</td>
       <td>{{$sup->jumlahbk}}</td>
       <td>{{$sup->subtotal}}</td>

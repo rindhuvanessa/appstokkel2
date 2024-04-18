@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('namap');
             $table->string('nomortelepon');
             $table->string('alamat');
-            $table->enum('jeniskelamin', ['laki-laki', 'perempuan']);
+            $table->enum('jeniskelamin', ['Laki-laki', 'Perempuan']);
             $table->string('kota');
             $table->string('provinsi');
             $table->timestamps();

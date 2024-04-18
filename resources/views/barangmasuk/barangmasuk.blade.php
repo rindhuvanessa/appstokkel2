@@ -21,7 +21,7 @@
 @foreach ($bmasuk as $sup)
     <tr>
     <th scope="row">{{$loop->iteration}}</th>
-      <td>{{$sup->tanggalfaktur}}</td>
+      <td>{{$sup->tglfktr}}</td>
       <td>{{$sup->suplayer->namasupplier}}</td>
       <td>{{$sup->stok->namab}}</td>
       <td>{{$sup->hargabeli}}</td>

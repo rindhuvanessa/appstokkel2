@@ -3,8 +3,8 @@
 <form action="/updatebkeluar/{{ $bkeluar->id}}" method="post" enctype="multipart/form-data">
   @csrf
   <div class="mb-3"> 
-    <label for="tanggalfaktur" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tanggalfaktur" class="form-control" id="tanggalfaktur" aria-describedby="masukan tanggal faktur">
+    <label for="tanggalfkt" class="form-label">Tanggal Faktur</label>
+    <input type="date" name="tanggalfkt" class="form-control" id="tanggalfkt" aria-describedby="masukan tanggal faktur">
   </div>
   <div class="mb-3" >
     <label for="stok_id" class="form-label">Nama Barang</label>

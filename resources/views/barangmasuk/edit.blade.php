@@ -12,8 +12,8 @@
     </select>
   </div>
   <div class="mb-3"> 
-    <label for="tanggalfaktur" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tanggalfaktur" class="form-control" id="tanggalfaktur" value="{{$bmasuk->tanggalfaktur}}">
+    <label for="tglfktr" class="form-label">Tanggal Faktur</label>
+    <input type="date" name="tglfktr" class="form-control" id="tglfktr" value="{{$bmasuk->tanggalfaktur}}">
   </div>
   <div class="mb-3">
     <label for="namabarang" class="form-label">Nama barang</label>

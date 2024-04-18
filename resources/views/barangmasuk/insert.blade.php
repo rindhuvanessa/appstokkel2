@@ -3,8 +3,8 @@
 <form action="/savebmasuk" method="post" enctype="multipart/form-data">
   @csrf
   <div class="mb-3"> 
-    <label for="tanggalfaktur" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tanggalfaktur" class="form-control" id="tanggalfaktur" aria-describedby="masukan nama tanggal">
+    <label for="tglfktr" class="form-label">Tanggal Faktur</label>
+    <input type="date" name="tglfktr" class="form-control" id="tglfktr" aria-describedby="masukan nama tanggal">
   </div>
   <div class="mb-3"> 
     <label for="suplayer_id" class="form-label">Suplayer</label>
