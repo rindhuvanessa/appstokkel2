@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bkeluars', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggalfaktur');
+            $table->date('tanggalfkt');
             $table->foreignId('stok_id');
             $table->string('jumlahbk');
             $table->string('subtotal');

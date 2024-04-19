@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bmasuk;
 use App\Models\Bkeluar;
+use App\Models\Recap;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -31,7 +32,7 @@ class RecapController extends Controller
             $bmasuk = Bmasuk::all();
             $bkeluar = Bkeluar::all();
             $sum_total = Bkeluar::sum('subtotal');
-            return view('recap.recap', compact('barangmasuk','bkeluar'));
+            return view('recap.recap', compact('bmasuk','bkeluar'));
 
         }
         return view('recap.recap', compact('bmasuk','bkeluar'));

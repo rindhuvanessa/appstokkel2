@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bmasuks', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggalfaktur');
+            $table->date('tglfktr');
             $table->foreignId('suplayer_id');
             $table->foreignId('stok_id');
             $table->string('hargabeli');
