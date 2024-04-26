@@ -64,7 +64,7 @@ class BkeluarController extends Controller
          $bkeluar = new Bkeluar;
          $bkeluar -> tanggalfkt = $request['tanggalfkt'];
          $bkeluar -> stok_id = $request['stok_id'];
-         $bkeluar -> jumlahbkbk = $request['jumlahbk'];
+         $bkeluar -> jumlahbk = $request['jumlahbk'];
          $bkeluar -> pelanggan_id = $request['pelanggan_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
          $bkeluar -> subtotal = $subtotal;
@@ -132,7 +132,7 @@ class BkeluarController extends Controller
          $bkeluar = Bkeluar::find($id);
          $bkeluar -> tanggalfkt = $request['tanggalfkt'];
          $bkeluar -> stok_id = $request['stok_id'];
-         $bkeluar -> jumlahbkbk = $request['jumlahbk'];
+         $bkeluar -> jumlahbk = $request['jumlahbk'];
          $bkeluar -> pelanggan_id = $request['pelanggan_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
          $bkeluar -> subtotal = $subtotal;

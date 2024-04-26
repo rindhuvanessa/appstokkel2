@@ -1,14 +1,15 @@
 @extends('admin.layout')
 @section('content')
-<form action="/updatebkeluar/{{ $bkeluar->id}}" method="post" enctype="multipart/form-data">
+<form action="/updatebkeluar/{{$bkeluar->id}}" method="post" enctype="multipart/form-data">
+@method('put')
   @csrf
   <div class="mb-3"> 
     <label for="tanggalfkt" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tanggalfkt" class="form-control" id="tanggalfkt" aria-describedby="masukan tanggal faktur">
+    <input type="date" name="tanggalfkt" class="form-control" id="tanggalfkt" value="{{$bkeluar->tanggalfkt}}">
   </div>
   <div class="mb-3" >
     <label for="stok_id" class="form-label">Nama Barang</label>
-    <select id="nb_namabarang" name="nb_namabarang" class="form-control">
+    <select id="stok_id" name="stok_id" class="form-control">
         @foreach ($namabarang as $nb)
           <option value="{{ $nb->id }}">{{$nb->namab}}</option>
         @endforeach
@@ -16,7 +17,7 @@
   </div>
   <div class="mb-3" >
     <label for="jumlahbk" class="form-label">Jumlah Barang Keluar</label>
-    <input type="number" name="jumlahbk" class="form-control" id="jumlahbk"  aria-describedby="tuliskan jumlah">
+    <input type="number" name="jumlahbk" class="form-control" id="jumlahbk"  value="{{$bkeluar->jumlahbk}}">
   </div>
   <div class="mb-3" >
     <label for="pelanggan_id" class="form-label">Nama Pengguna</label>
@@ -28,13 +29,8 @@
   </div>
   <div class="mb-3" >
     <label for="tanggalbuat" class="form-label">Tanggal Buat</label>
-    <input type="date" name="tanggalbuat" class="form-control" id="tanggalbuat" aria-describedby="masukan tanggal">
+    <input type="date" name="tanggalbuat" class="form-control" id="tanggalbuat" value="{{$bkeluar->tanggalbuat}}">
   </div>
-  <div class="mb-3" >
-    <label for="cabang" class="form-label">Cabang</label>
-    <input type="text" name="cabang" class="form-control" id="cabang" aria-describedby="masukan nama cabang">
-  </div>
-
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @endsection

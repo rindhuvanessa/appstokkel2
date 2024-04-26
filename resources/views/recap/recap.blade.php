@@ -29,8 +29,6 @@
       <th scope="col">Nama Barang</th>
       <th scope="col">Harga Beli </th>
       <th scope="col">Jumlah Masuk</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
   </tr>
 </thead>
 <tbody>
@@ -41,9 +39,7 @@
       <td>{{$sup->suplayer->namasupplier}}</td>
       <td>{{$sup->stok->namab}}</td>
       <td>{{$sup->hargabeli}}</td>
-      <td>{{$sup->jumlahbm}}</td>
-      <td><a href="/editbmasuk/{{$sup->id}}" class="btn btn-success">Edit</a></td>
-      <td><a href="/hapusbmasuk/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
+      <td>{{$sup->jumlahbm}}</td> 
     </tr>
 @endforeach
 </tbody>
@@ -61,8 +57,6 @@
       <th scope="col">Subtotal</th>
       <th scope="col">Pelanggan</th>
       <th scope="col">Tanggal Buat</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -75,8 +69,6 @@
       <td>{{$sup->subtotal}}</td>
       <td>{{$sup->pelanggan->namap}}</td>
       <td>{{$sup->tanggalbuat}}</td>
-      <td><a href="/editbkeluar/{{$sup->id}}" class="btn btn-success">Edit</a></td>
-      <td><a href="/hapusbkeluar/{{$sup->id}}" class="btn btn-danger">Delete</a></td> 
     </tr>
 @endforeach
   </tbody>

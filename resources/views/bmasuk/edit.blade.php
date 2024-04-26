@@ -5,7 +5,7 @@
   @csrf
   <div class="mb-3"> 
     <label for="tglfktr" class="form-label">Tanggal Faktur</label>
-    <input type="date" name="tglfktr" class="form-control" id="tglfktr" value="{{$bmasuk->tanggalfaktur}}">
+    <input type="date" name="tglfktr" class="form-control" id="tglfktr" value="{{$bmasuk->tglfktr}}">
   </div>
   <div class="mb-3"> 
     <label for="suplayer_id" class="form-label">Suplayer</label>
@@ -29,7 +29,7 @@
   </div>
   <div class="mb-3" >
     <label for="jumlahbm" class="form-label">Jumlah Barang Masuk</label>
-    <input type="number" name="jumlahbm" class="form-control" id="jumlahbm" value="{{$bmasuk->jumlah}}">
+    <input type="number" name="jumlahbm" class="form-control" id="jumlahbm" value="{{$bmasuk->jumlahbm}}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
