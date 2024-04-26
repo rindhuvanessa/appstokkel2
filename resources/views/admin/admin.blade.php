@@ -11,8 +11,6 @@
       <th scope="col">Nama</th>
       <th scope="col">Jabatan</th>
       <th scope="col">Email</th>
-      <th scope="col">Cabang</th>
-      <th scope="col">Delate</th>
     </tr>
   </thead>
   <tbody>

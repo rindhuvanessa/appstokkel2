@@ -42,37 +42,37 @@ class BkeluarController extends Controller
         $request->validate(
             [
                 
-                'tanggalfaktur' => ['required'],
+                'tanggalfkt' => ['required'],
                 'stok_id' => ['required'],
-                'jumlah' => ['required'],
-                'user_id' => ['required'],
+                'jumlahbk' => ['required'],
+                'pelanggan_id' => ['required'],
                 'tanggalbuat' => ['required'],
                 
             ],
             [
-                'tanggalfaktur.required' => 'Masukkan Tanggal Faktur',
+                'tanggalfkt.required' => 'Masukkan Tanggal fkt',
                 'stok_id.required' => 'Masukkan Nama Barang',
-                'jumlah.required' => 'Jumlah Harus Diisi',
-                'user_id.required' => 'Nama Pengguna Harus Diisi',
+                'jumlahbk.required' => 'Jumlah Harus Diisi',
+                'pelanggan_id.required' => 'Nama Pengguna Harus Diisi',
                 'tanggalbuat.required' => ' Masukkan Tanggal Buat ',
             ]
         ); 
         $idstok = $request ['stok_id'];
         $produk = Stok::findOrfail($idstok);
-        $subtotal = $produk->hargalist *$request['jumlah'];
+        $subtotal = $produk->hargalist *$request['jumlahbk'];
 
          $bkeluar = new Bkeluar;
-         $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
+         $bkeluar -> tanggalfkt = $request['tanggalfkt'];
          $bkeluar -> stok_id = $request['stok_id'];
-         $bkeluar -> jumlahbk = $request['jumlah'];
-         $bkeluar -> pelanggan_id = $request['user_id'];
+         $bkeluar -> jumlahbkbk = $request['jumlahbk'];
+         $bkeluar -> pelanggan_id = $request['pelanggan_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
          $bkeluar -> subtotal = $subtotal;
          $bkeluar ->save();
 
          $updatestok = Stok::findOrfail($idstok);
          $updatestok->update([
-             'stok' =>$updatestok->hargalist - $request['jumlah'],
+             'jstok' =>$updatestok->hargalist - $request['jumlahbk'],
          ]);
  
          if ($bkeluar) {
@@ -109,38 +109,38 @@ class BkeluarController extends Controller
         $request->validate(
             [
                 
-                'tanggalfaktur' => ['required'],
+                'tanggalfkt' => ['required'],
                 'stok_id' => ['required'],
-                'jumlah' => ['required'],
-                'user_id' => ['required'],
+                'jumlahbk' => ['required'],
+                'pelanggan_id' => ['required'],
                 'tanggalbuat' => ['required'],
 
             ],
             [
-                'tanggalfaktur.required' => 'Masukkan Tanggal Faktur',
+                'tanggalfkt.required' => 'Masukkan Tanggal fkt',
                 'stok_id.required' => 'Masukkan Nama Barang',
-                'jumlah.required' => 'Jumlah Harus Diisi',
-                'user_id.required' => 'Nama Pengguna Harus Diisi',
+                'jumlahbk.required' => 'Jumlah Harus Diisi',
+                'pelanggan_id.required' => 'Nama Pengguna Harus Diisi',
                 'tanggalbuat.required' => ' Masukkan Tanggal Buat ',
             ]
         );       
         
         $idstok = $request ['stok_id'];
         $produk = Stok::findOrfail($idstok);
-        $subtotal = $produk->hargalist *$request['jumlah'];
+        $subtotal = $produk->hargalist *$request['jumlahbk'];
 
          $bkeluar = Bkeluar::find($id);
-         $bkeluar -> tanggalfaktur = $request['tanggalfaktur'];
+         $bkeluar -> tanggalfkt = $request['tanggalfkt'];
          $bkeluar -> stok_id = $request['stok_id'];
-         $bkeluar -> jumlahbk = $request['jumlah'];
-         $bkeluar -> pelanggan_id = $request['user_id'];
+         $bkeluar -> jumlahbkbk = $request['jumlahbk'];
+         $bkeluar -> pelanggan_id = $request['pelanggan_id'];
          $bkeluar -> tanggalbuat = $request['tanggalbuat'];
          $bkeluar -> subtotal = $subtotal;
          $bkeluar ->save();
 
          $updatestok = stok::findOrfail($idstok);
          $updatestok->update([
-             'stok' =>$updatestok->hargalist - $request['jumlah'],
+             'jstok' =>$updatestok->hargalist - $request['jumlahbk'],
          ]);
  
          if ($bkeluar) {

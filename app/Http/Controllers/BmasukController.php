@@ -20,7 +20,7 @@ class BmasukController extends Controller
     public function index()
     {
         $bmasuk = Bmasuk::all();
-        return view('barangmasuk.barangmasuk', compact('bmasuk'));
+        return view('bmasuk.bmasuk', compact('bmasuk'));
     }
 
     /**
@@ -30,7 +30,7 @@ class BmasukController extends Controller
     {
         $namabarang = Stok::all();
         $suplayer = Suplayer::all();
-        return view('barangmasuk.insert', compact('suplayer','namabarang'));
+        return view('bmasuk.insert', compact('suplayer','namabarang'));
     }
 
     /**
@@ -40,35 +40,35 @@ class BmasukController extends Controller
     {
         $request->validate(
             [
-                'tanggalfaktur' => ['required'],
+                'tglfktr' => ['required'],
                 'suplayer_id' => ['required'],
-                'namabarang' => ['required'],
+                'stok_id' => ['required'],
                 'hargabeli' => ['required'],
-                'jumlah' => ['required'],
+                'jumlahbm' => ['required'],
 
             ],
             [
-                'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
+                'tglfktr.required'=> 'Masukkan Tanggal Faktur',
                 'suplayer_id.required'=> 'Masukkan Nama Suplayer',
-                'namabarang.required' => 'Masukkan Stok',
+                'stok_id.required' => 'Masukkan Stok',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
-                'jumlah.required'=> 'Masukkan Jumlah',
+                'jumlahbm.required'=> 'Masukkan Jumlah',
                 
             ]
         );
 
          $bmasuk = new Bmasuk;
-        $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
+        $bmasuk -> tglfktr = $request['tglfktr'];
         $bmasuk -> suplayer_id = $request['suplayer_id'];
-        $bmasuk -> stok_id = $request['namabarang'];
+        $bmasuk -> stok_id = $request['stok_id'];
         $bmasuk -> hargabeli = $request['hargabeli'];
-        $bmasuk -> jumlahbm = $request['jumlah'];
+        $bmasuk -> jumlahbm = $request['jumlahbm'];
         $bmasuk->save();
 
-        $idstok = $request ['namabarang'];
+        $idstok = $request ['stok_id'];
         $updatestok = Stok::findOrfail($idstok);
         $updatestok->update([
-            'jstok' => $updatestok->jstok + $request ['jumlah'],
+            'jstok' => $updatestok->jstok + $request ['jumlahbm'],
         ]);
 
         if ($bmasuk) {
@@ -94,7 +94,7 @@ class BmasukController extends Controller
         $namabarang = Stok::all();
         $suplayer = Suplayer::all();
         $bmasuk = Bmasuk::find($id);
-        return view('barangmasuk.edit', compact('bmasuk','suplayer','namabarang'));
+        return view('bmasuk.edit', compact('bmasuk','suplayer','namabarang'));
     }
 
     /**
@@ -104,29 +104,29 @@ class BmasukController extends Controller
     {
         $request->validate(
             [
-                'tanggalfaktur' => ['required'],
+                'tglfktr' => ['required'],
                 'suplayer_id' => ['required'],
                 'stok_id' => ['required'],
                 'hargabeli' => ['required'],
-                'jumlah' => ['required'],
+                'jumlahbm' => ['required'],
 
             ],
             [
-                'tanggalfaktur.required'=> 'Masukkan Tanggal Faktur',
+                'tglfktr.required'=> 'Masukkan Tanggal Faktur',
                 'suplayer_id.required'=> 'Masukkan Nama Suplayer',
                 'stok_id.required' => 'Masukkan Stok',
                 'hargabeli.required'=> 'Masukkan Harga Beli',
-                'jumlah.required'=> 'Masukkan Jumlah',
-
+                'jumlahbm.required'=> 'Masukkan Jumlah',
+                
             ]
         );
 
-        $bmasuk = new Bmasuk;
-        $bmasuk -> tanggalfaktur = $request['tanggalfaktur'];
+        $bmasuk =  Bmasuk::find($id);
+        $bmasuk -> tglfktr = $request['tglfktr'];
         $bmasuk -> suplayer_id = $request['suplayer_id'];
-        $bmasuk -> stok_id = $request['namabarang'];
+        $bmasuk -> stok_id = $request['stok_id'];
         $bmasuk -> hargabeli = $request['hargabeli'];
-        $bmasuk -> jumlahbm = $request['jumlah'];
+        $bmasuk -> jumlahbm = $request['jumlahbm'];
         $bmasuk->save();
 
         if ($bmasuk) {

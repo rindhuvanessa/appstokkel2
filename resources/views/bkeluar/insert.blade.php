@@ -15,12 +15,12 @@
         </select>
   </div>
   <div class="mb-3" >
-    <label for="jumlah" class="form-label">Jumlah Masuk</label>
-    <input type="number" name="jumlah" class="form-control" id="jumlah" aria-describedby="masukan jumlah masuk">
+    <label for="jumlahbk" class="form-label">Jumlah Barang Keluar</label>
+    <input type="number" name="jumlahbk" class="form-control" id="jumlahbk" aria-describedby="masukan jumlah masuk">
   </div>
     <div class="mb-3" >
-    <label for="user_id" class="form-label">Nama Pengguna</label>
-    <select id="user_id" name="user_id" class="form-control">
+    <label for="pelanggan_id" class="form-label">Nama Pengguna</label>
+    <select id="pelanggan_id" name="pelanggan_id" class="form-control">
         @foreach ($namapengguna as $np)
         <option value="{{$np->id }}">{{ $np->namap}}</option>
         @endforeach
